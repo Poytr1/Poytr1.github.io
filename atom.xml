@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-12T04:28:54.000Z</updated>
+  <updated>2017-03-12T12:02:36.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,114 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里面经总结</title>
+    <link href="http://yoursite.com/2017/03/12/%E9%98%BF%E9%87%8C%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/03/12/阿里面经总结/</id>
+    <published>2017-03-12T11:34:28.000Z</published>
+    <updated>2017-03-12T12:02:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="阿里电面题汇总（java研发）"><a href="#阿里电面题汇总（java研发）" class="headerlink" title="阿里电面题汇总（java研发）"></a>阿里电面题汇总（java研发）</h1><ol>
+<li><p><strong>从下往上说一下OSI七个分层？</strong> </p>
+<p>物理层、数据链路层、网络层、传输层、会话层、表示层、应用层。</p>
+</li>
+<li><p><strong>TCP和UDP的区别</strong>？</p>
+<ul>
+<li>TCP提供面向连接的、可靠的数据流传输，而UDP提供的是非面向连接的、不可靠的数据流传输。（TCP发出去还会问候核实一下以确保安全; UDP发出去就不管了 ）</li>
+<li>TCP传输单位称为TCP报文段，UDP传输单位称为用户数据报。</li>
+<li>TCP注重数据安全性，UDP数据传输快，因为不需要连接等待，少了许多操作，但是其安全性却一般。</li>
+</ul>
+</li>
+<li><p><strong>说说数据库连接（join）？</strong></p>
+<ul>
+<li>Inner join–产生的是AB两个集合的交集    </li>
+<li>left[outer]join–产生A的完全集，而B中匹配的则有值，没有匹配的则返回null </li>
+<li>right[outer]join–产生B的完全集，而A中匹配的则有值，没有匹配的则返回null </li>
+</ul>
+</li>
+<li><p><strong>说说事务？</strong></p>
+<p>所谓事务，它是一个操作序列，这些操作要么都执行，要么都不执行，它是一个不可分割的工作单位。</p>
+</li>
+<li><p><strong>HashMap原理？</strong></p>
+<ul>
+<li><p>底层是数组加链表实现的哈希表。允许null作为键，null作为值。线程不安全。</p>
+</li>
+<li><p>为什么用数组+链表实现？</p>
+<p>利用拉链法解决冲突：把所有的同义词用单链表链接起来。该方法下，哈希表每个单元中存放的不再是元素本身，而是相应同义词单链表的头指针。</p>
+</li>
+<li><p>HashMap维护了一个Entry数组，Entry内部类有key,value，hash和next四个字段，其中next也是一个Entry类型。可以将Entry数组理解为一个个的散列桶。每一个桶实际上是一个单链表。当执行put操作时，会根据key的hashcode定位到相应的桶。   遍历单链表检查该key是否已经存在，如果存在，覆盖该value，反之，新建一个新的Entry，并放在单链表的头部。当通过传递key调用get方法时，它再次使用key.hashCode()来找到相应的散列桶，然后使用key.equals()方法找出单链表中正确的Entry，然后返回它的值。 </p>
+</li>
+<li><p>HashMap：线程不同步。根据key的hashcode进行存储，内部使用静态内部类Node的数组进行存储，默认初始大小为16，每次扩大一倍。当发生Hash冲突时，采用拉链法（链表）。可以接受为null的键值(key)和值(value)。JDK1.8中：当单个桶中元素个数大于等于8时，链表实现改为红黑树实现；当元素个数小于6时，变回链表实现。由此来防止hashCode攻击。 </p>
+</li>
+<li><p>Hashtable是线程安全的。ConcurrentHashMap 针对读操作做了大量的优化。通过 HashEntry 对象的不变性和用 volatile 型变量协调线程间的内存可见性，使得 大多数时候，读操作不需要加锁就可以正确获得值。这个特性使得 ConcurrentHashMap 的并发性能在分离锁的基础上又有了近一步的提高。ConcurrentHashMap 的高并发性主要来自于三个方面：</p>
+<ul>
+<li>用分离锁实现多个线程间的更深层次的共享访问。</li>
+<li>用 HashEntery 对象的不变性来降低执行读操作的线程在遍历链表期间对加锁的需求。</li>
+<li>通过对同一个 Volatile 变量的写 / 读访问，协调不同线程间读 / 写操作的内存可见性。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Java运行时数据区域？</strong> </p>
+<p>包括程序计数器、JVM栈、本地方法栈、方法区、堆   </p>
+</li>
+<li><p><strong>方法区里存放什么？</strong></p>
+<p>由于程序计数器、JVM栈、本地方法栈3个区域随线程而生随线程而灭，对这几个区域内存的回收和分配具有确定性。 而方法区和堆则不一样，程序需要在运行时才知道创建哪些对象，对这部分内存的分配是动态的，GC关注的也就是这部分内存。</p>
+<ul>
+<li>本地方法栈：和jvm栈所发挥的作用类似，区别是jvm栈为jvm执行java方法（字节码）服务，而本地方法栈为jvm使用的native方法服务。 </li>
+<li>JVM栈：局部变量表、操作数栈、动态链接、方法出口。 </li>
+<li>方法区：用于存储已被虚拟机加载的类信息，常量、静态变量、即时编译器编译后的代码等。 </li>
+<li>堆：存放对象实例。</li>
+</ul>
+</li>
+<li><p><strong>怎样判断是否需要收集？</strong></p>
+<ul>
+<li>引用计数法：对象没有任何引用与之关联(无法解决循环引用) </li>
+<li>可达性分析法：通过一组称为GC Root的对象为起点,从这些节点向下搜索，如果某对象不能从这些根对象的一个(至少一个)所到达,则判定该对象应当回收。 </li>
+</ul>
+</li>
+<li><p><strong>什么可作为GCRoot的对象？</strong></p>
+<p>虚拟机栈中引用的对象。方法区中类静态属性引用的对象，方法区中类常量引用的对象，本地方法栈中JNI引用的对象。</p>
+</li>
+<li><p><strong>Spring IOC/AOP？</strong>  </p>
+<p><em>AOP（Aspect-OrientedProgramming，面向方面编程</em>,可以说是<em>OOP（Object-Oriented Programing，面向对象编程）</em>的补充和完善。 OOP引入封装、继承和多态性等概念来建立一种对象层次结构，用以模拟公共行为的一个集合。当我们需要为分散的对象引入公共行为的时候，OOP则显得无能为力。 也就是说，OOP允许你定义从上到下的关系，但并不适合定义从左到右的关系。例如日志功能。日志代码往往水平地散布在所有对象层次中，而与它所散布到的对象的核心功能毫无关系。对于其他类型的代码，如安全性、异常处理和透明的持续性也是如此。这种散布在各处的无关的代码被称为<em>横切（cross-cutting）</em>代码， 在OOP设计中，它导致了大量代码的重复，而不利于各个模块的重用。<em>依赖注入(Dependency Injection)</em>和<em>控制反转(Inversion of Control)</em>是同一个概念.当某个角色(可能是一个Java实例，调用者)需要另一个角色(另一个Java实例，被调用者)的协助时，在传统的程序设计过程中，通常由调用者来创建被调用者的实例.但在Spring里，创建被调用者的工作不再由调用者来完成，因此称为控制反转;创建被调用者实例的工作通常由Spring容器来完成，然后注入调用者，因此也称为依赖注入.不管是依赖注入，还是控制反转，都说明Spring采用动态、灵活的方式来管理各种对象。对象与对象之间的具体实现互相透明。 在理解依赖注入之前，看如下这个问题在各种社会形态里如何解决:一个人(Java实例，调用者)需要一把斧子(Java实例，被调用者)。 </p>
+</li>
+<li><p><em>自己在应用中写过什么切面？</em></p>
+<p>AOP使用场景：  </p>
+<ul>
+<li>Authentication 权限 </li>
+<li>Caching 缓存 </li>
+<li>Context passing 内容传递 </li>
+<li>Error handling 错误处理 </li>
+<li>Lazy loading　懒加载 </li>
+<li>Debugging　　调试 </li>
+<li>logging, tracing, profiling and monitoring　记录跟踪　优化　校准 </li>
+<li>Performance optimization　性能优化 </li>
+<li>Persistence　　持久化 </li>
+<li>Resource pooling　资源池 </li>
+<li>Synchronization　同步 </li>
+<li>Transactions 事务</li>
+</ul>
+</li>
+<li><p>// to be continue…</p>
+<p>​</p>
+<p>​</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;阿里电面题汇总（java研发）&quot;&gt;&lt;a href=&quot;#阿里电面题汇总（java研发）&quot; class=&quot;headerlink&quot; title=&quot;阿里电面题汇总（java研发）&quot;&gt;&lt;/a&gt;阿里电面题汇总（java研发）&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;从
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>hw2</title>
