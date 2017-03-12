@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-12T12:02:36.000Z</updated>
+  <updated>2017-03-12T12:05:53.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/03/12/%E9%98%BF%E9%87%8C%E9%9D%A2%E7%BB%8F%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/03/12/阿里面经总结/</id>
     <published>2017-03-12T11:34:28.000Z</published>
-    <updated>2017-03-12T12:02:36.000Z</updated>
+    <updated>2017-03-12T12:05:53.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="阿里电面题汇总（java研发）"><a href="#阿里电面题汇总（java研发）" class="headerlink" title="阿里电面题汇总（java研发）"></a>阿里电面题汇总（java研发）</h1><ol>
 <li><p><strong>从下往上说一下OSI七个分层？</strong> </p>
@@ -87,7 +87,7 @@
 <li><p><strong>Spring IOC/AOP？</strong>  </p>
 <p><em>AOP（Aspect-OrientedProgramming，面向方面编程</em>,可以说是<em>OOP（Object-Oriented Programing，面向对象编程）</em>的补充和完善。 OOP引入封装、继承和多态性等概念来建立一种对象层次结构，用以模拟公共行为的一个集合。当我们需要为分散的对象引入公共行为的时候，OOP则显得无能为力。 也就是说，OOP允许你定义从上到下的关系，但并不适合定义从左到右的关系。例如日志功能。日志代码往往水平地散布在所有对象层次中，而与它所散布到的对象的核心功能毫无关系。对于其他类型的代码，如安全性、异常处理和透明的持续性也是如此。这种散布在各处的无关的代码被称为<em>横切（cross-cutting）</em>代码， 在OOP设计中，它导致了大量代码的重复，而不利于各个模块的重用。<em>依赖注入(Dependency Injection)</em>和<em>控制反转(Inversion of Control)</em>是同一个概念.当某个角色(可能是一个Java实例，调用者)需要另一个角色(另一个Java实例，被调用者)的协助时，在传统的程序设计过程中，通常由调用者来创建被调用者的实例.但在Spring里，创建被调用者的工作不再由调用者来完成，因此称为控制反转;创建被调用者实例的工作通常由Spring容器来完成，然后注入调用者，因此也称为依赖注入.不管是依赖注入，还是控制反转，都说明Spring采用动态、灵活的方式来管理各种对象。对象与对象之间的具体实现互相透明。 在理解依赖注入之前，看如下这个问题在各种社会形态里如何解决:一个人(Java实例，调用者)需要一把斧子(Java实例，被调用者)。 </p>
 </li>
-<li><p><em>自己在应用中写过什么切面？</em></p>
+<li><p><strong>自己在应用中写过什么切面？</strong></p>
 <p>AOP使用场景：  </p>
 <ul>
 <li>Authentication 权限 </li>
@@ -104,11 +104,11 @@
 <li>Transactions 事务</li>
 </ul>
 </li>
-<li><p>// to be continue…</p>
-<p>​</p>
-<p>​</p>
-</li>
 </ol>
+<hr>
+<p>// to be continue…</p>
+<p>​</p>
+<p>​</p>
 ]]></content>
     
     <summary type="html">
