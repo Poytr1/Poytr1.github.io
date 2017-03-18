@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-18T12:00:04.000Z</updated>
+  <updated>2017-03-18T12:13:15.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>说一说monads</title>
-    <link href="http://yoursite.com/2017/03/15/%E8%AF%B4%E4%B8%80%E8%AF%B4monads/"/>
-    <id>http://yoursite.com/2017/03/15/说一说monads/</id>
+    <title>说一说&#39;Monads&#39;</title>
+    <link href="http://yoursite.com/2017/03/15/%E8%AF%B4%E4%B8%80%E8%AF%B4&#39;Monads&#39;/"/>
+    <id>http://yoursite.com/2017/03/15/说一说&#39;Monads&#39;/</id>
     <published>2017-03-15T02:12:20.000Z</published>
-    <updated>2017-03-18T12:00:04.000Z</updated>
+    <updated>2017-03-18T12:13:15.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="说一说‘monads’"><a href="#说一说‘monads’" class="headerlink" title="说一说‘monads’"></a>说一说‘<em>monads</em>’</h1><h3 id="1-关于范畴论"><a href="#1-关于范畴论" class="headerlink" title="1.关于范畴论"></a>1.关于<em>范畴论</em></h3><blockquote>
 <p>范畴论是<strong>数学</strong>的一门学科，以抽象的方法来处理数学概念，将这些概念形式化成一组组“物件”及“态射”。范畴论是对数学的某些分支的更高阶的抽象化，所以被称为“一般化的抽象废话”。</p>
