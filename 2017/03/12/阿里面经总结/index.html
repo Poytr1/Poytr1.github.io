@@ -182,7 +182,7 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
     
@@ -529,10 +529,15 @@
 <li><p><strong>java中的软引用，弱引用？</strong></p>
 <ul>
 <li><p>如果一个对象只具有软引用(<em>SoftReference</em>)，则内存空间足够，垃圾回收器就不会回收它；如果内存空间不足了，就会回收这些对象的内存。只要垃圾回收器没有回收它，该对象就可以被程序使用。<strong>软引用可用来实现内存敏感的高速缓存。</strong>   </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String str=<span class="keyword">new</span> String(<span class="string">"abc"</span>);                                     <span class="comment">// 强引用</span></div><div class="line">SoftReference&lt;String&gt; softRef=<span class="keyword">new</span> SoftReference&lt;String&gt;(str);     <span class="comment">// 软引用</span></div></pre></td></tr></table></figure>
+<pre class=" language-java"><code class="language-java"> String str<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                                     <span class="token comment" spellcheck="true">// 强引用</span>
+ SoftReference<span class="token operator">&lt;</span>String<span class="token operator">></span> softRef<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">SoftReference</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment" spellcheck="true">// 软引用</span>
+</code></pre>
 </li>
 <li><p>弱引用(<em>WeakReference</em>)与软引用的区别在于：只具有弱引用的对象拥有更短暂的生命周期。在垃圾回收器线程扫描它所管辖的内存区域的过程中，一旦发现了只具有弱引用的对象，不管当前内存空间足够与否，都会回收它的内存。不过，由于垃圾回收器是一个优先级很低的线程，因此不一定会很快发现那些只具有弱引用的对象。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">String str=<span class="keyword">new</span> String(<span class="string">"abc"</span>);    </div><div class="line">WeakReference&lt;String&gt; abcWeakRef = <span class="keyword">new</span> WeakReference&lt;String&gt;(str);</div><div class="line">str=<span class="keyword">null</span>;</div></pre></td></tr></table></figure>
+<pre class=" language-java"><code class="language-java">String str<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span><span class="token string">"abc"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    
+WeakReference<span class="token operator">&lt;</span>String<span class="token operator">></span> abcWeakRef <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WeakReference</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+str<span class="token operator">=</span>null<span class="token punctuation">;</span>
+</code></pre>
 </li>
 </ul>
 </li>

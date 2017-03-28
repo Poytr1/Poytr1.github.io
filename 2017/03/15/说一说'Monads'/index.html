@@ -182,7 +182,7 @@
 
     <!-- Custom Head -->
     
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
     
@@ -424,11 +424,15 @@
 </blockquote>
 <ol>
 <li><p>首先要满足第一个条件：<strong>存在物件与物件之间的映射</strong>。在<em>Haskell</em>中，<strong>type constructor</strong>可以利用一个typeclass构造出其他的typeclass来，例如以下的定义:</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="type">Tree</span></div><div class="line"><span class="class"><span class="keyword">data</span> <span class="type">Tree</span> a = <span class="type">Tip</span> | <span class="type">Node</span> a (<span class="type">Tree</span> <span class="title">a</span>) (<span class="type">Tree</span> <span class="title">a</span>)</span></div></pre></td></tr></table></figure>
+<pre class=" language-haskell"><code class="language-haskell"><span class="token constant">Tree</span>
+<span class="token keyword">data</span> <span class="token constant">Tree</span> <span class="token hvariable">a</span> <span class="token operator">=</span> <span class="token constant">Tip</span> <span class="token operator">|</span> <span class="token constant">Node</span> <span class="token hvariable">a</span> <span class="token punctuation">(</span><span class="token constant">Tree</span> <span class="token hvariable">a</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token constant">Tree</span> <span class="token hvariable">a</span><span class="token punctuation">)</span>
+</code></pre>
 <p>这里<strong>Node</strong>作为一类类型可以构造出<strong>Tree</strong>这种类型来。</p>
 </li>
 <li><p>第二个条件：<strong>态射与态射之间的映射</strong>。我们来看下面这种typeclass</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="type">Functor</span> f <span class="keyword">where</span></span></div><div class="line">  fmap:: (a -&gt; b) -&gt; f a -&gt; f b</div></pre></td></tr></table></figure>
+<pre class=" language-haskell"><code class="language-haskell"><span class="token keyword">class</span> <span class="token constant">Functor</span> <span class="token hvariable">f</span> <span class="token keyword">where</span>
+  <span class="token builtin">fmap</span><span class="token operator">::</span> <span class="token punctuation">(</span><span class="token hvariable">a</span> <span class="token operator">-></span> <span class="token hvariable">b</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token hvariable">f</span> <span class="token hvariable">a</span> <span class="token operator">-></span> <span class="token hvariable">f</span> <span class="token hvariable">b</span>
+</code></pre>
 <p>typeclass fmap接受一个函数（物件与物件之间的映射），将其映射到另一个函数上（物件与物件的映射），所以说fmap是一个满足“态射与态射之间的映射”的一个typeclass。</p>
 </li>
 </ol>
