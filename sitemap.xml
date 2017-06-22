@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://poytr1.github.io/2017/06/22/EDSL-With-Typed-Lambda-Calculus-Implemented-In-Haskell/</loc>
+    
+    <lastmod>2017-06-22T04:11:01.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://poytr1.github.io/2017/03/28/'spacemacs+proof-general+coq'/</loc>
     
     <lastmod>2017-03-28T14:44:55.000Z</lastmod>
