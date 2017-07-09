@@ -504,13 +504,10 @@
     <link href="http://poytr1.github.io/2017/03/28/&#39;spacemacs+proof-general+coq&#39;/"/>
     <id>http://poytr1.github.io/2017/03/28/&#39;spacemacs+proof-general+coq&#39;/</id>
     <published>2017-03-28T14:16:49.000Z</published>
-    <updated>2017-03-28T14:44:55.000Z</updated>
+    <updated>2017-07-09T02:57:51.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="macOS-Sierra下配置spacemacs-proof-general-coq"><a href="#macOS-Sierra下配置spacemacs-proof-general-coq" class="headerlink" title="macOS Sierra下配置spacemacs+proof-general+coq"></a>macOS Sierra下配置spacemacs+proof-general+coq</h1><blockquote>
-<p>总算找到了写Coq还算比较舒服的姿势~~</p>
-</blockquote>
-<ol>
-<li><p>替换<strong>homebrew</strong>现有的上游</p>
+    <content type="html"><![CDATA[<h1 id="macOS-Sierra下配置spacemacs-proof-general-coq"><a href="#macOS-Sierra下配置spacemacs-proof-general-coq" class="headerlink" title="macOS Sierra下配置spacemacs+proof-general+coq"></a>macOS Sierra下配置spacemacs+proof-general+coq</h1><ol>
+<li><p>替换<strong>homebrew</strong>现有的上游，这里使用清华源。(如果之前已经配置过可以无视~)</p>
 <pre class=" language-Shell"><code class="language-Shell">$ cd "$(brew --repo)"
 $ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
 
@@ -520,26 +517,26 @@ $ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/ho
 $ brew update
 </code></pre>
 </li>
-<li><p>下载<strong>proof-general</strong></p>
+<li><p>用<strong>homebrew</strong>下载<strong>proof-general</strong></p>
 <pre class=" language-shell"><code class="language-shell">$ brew install proof-general
 </code></pre>
 </li>
-<li><p>下载<strong>emacs-plus</strong></p>
+<li><p>用<strong>homebrew</strong>下载<strong>emacs-plus</strong></p>
 <pre class=" language-shell"><code class="language-shell">$ brew tap d12frosted/emacs-plus
 $ brew install emacs-plus
 $ brew linkapps emacs-plus
 </code></pre>
 </li>
-<li><p>如果之前没有<em>Emacs configuration</em>，即不存在文件夹<strong>~/.emacs.d</strong>，直接git clone spacemacs即可</p>
+<li><p>如果之前没有<em>Emacs configuration</em>，(可以看看有没有文件夹<strong>~/.emacs.d</strong>，没有的话就是之前没有配置过)，直接git clone spacemacs即可</p>
 <pre class=" language-shell"><code class="language-shell">$ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 </code></pre>
-<p>如果目录下已经有文件了，不想保存之前的配置的话，直接<code>rm -rf</code>文件夹即可，如果想保留之前的配置，<a href="[https://github.com/syl20bnr/spacemacs#install](https://github.com/syl20bnr/spacemacs#install">这里</a>)有详细的说明。</p>
+<p>如果目录下已经有文件了，不想保存之前的配置的话，直接<code>rm -rf</code>删除文件夹即可，如果想保留之前的配置，<a href="[https://github.com/syl20bnr/spacemacs#install](https://github.com/syl20bnr/spacemacs#install">这里</a>)有详细的说明。</p>
 </li>
-<li><p>先启动一次，更新一些配置（不然每次打开会报一些奇怪的错误。。），并且回答一些初始问题，比如（像我）选用vim模式等，之后在根目录下会生成spacemacs的配置文件<em>.spacemacs</em>。</p>
+<li><p>先启动一次，更新一些配置，并且设置一些初始的选项，比如使用vim模式还是其他的等等，这里按照个人喜好即可。之后在根目录会生成spacemacs的配置文件<em>.spacemacs</em>。</p>
 <pre class=" language-shell"><code class="language-shell">$ emacs --insecure
 </code></pre>
 </li>
-<li><p>下载<strong>spacemacs-coq layer</strong>，并在<strong>~/.spacemacs</strong>文件里的<code>dotspacemacs-configuration-layers</code>中添加<strong>coq</strong>。</p>
+<li><p>下载<strong>spacemacs-coq layer</strong>，并在<strong>~/.spacemacs</strong>文件里的<code>dotspacemacs-configuration-layers</code>中添加<strong>coq</strong>的支持。</p>
 <pre class=" language-shell"><code class="language-shell">git clone https://github.com/olivierverdier/spacemacs-coq ~/.emacs.d/private/coq
 </code></pre>
 </li>
@@ -550,7 +547,7 @@ $ brew linkapps emacs-plus
     ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
 </code></pre>
 </li>
-<li><p>重新启动emacs，等待自动安装Company-Coq，这样就配置完成啦。</p>
+<li><p>重新启动emacs，等待自动安装<strong>Company-Coq</strong>，这样就配置完成啦。</p>
 </li>
 </ol>
 <p>PS：在此之前我已经安装了过了OCaml与CoqIDE</p>
