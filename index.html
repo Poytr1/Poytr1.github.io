@@ -285,7 +285,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://poytr1.github.io/2018/03/22/Jenkin-x-初体验/">
+    <link itemprop="mainEntityOfPage" href="http://poytr1.github.io/2018/03/23/Jenkins-x-初体验/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peterson Xu">
@@ -304,7 +304,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/03/22/Jenkin-x-初体验/" itemprop="url">Jenkin X 初体验</a></h1>
+                <a class="post-title-link" href="/2018/03/23/Jenkins-x-初体验/" itemprop="url">Jenkins-x 初体验</a></h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T17:51:33+08:00">
-                2018-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-23T17:41:01+08:00">
+                2018-03-23
               </time>
             
 
@@ -361,37 +361,37 @@
 <li><p>install Jenkins X with brew </p>
 <pre><code>brew tap jenkins-x/jx
 brew install jx
-</code></pre><p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BCD2E1E0-120A-437D-BAA8-45063C6EB472.png" alt="BCD2E1E0-120A-437D-BAA8-45063C6EB472"></p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/7BEA60BF-DF0D-4C7A-B6E9-1B5A47ABB044.png" alt="7BEA60BF-DF0D-4C7A-B6E9-1B5A47ABB044"></p>
+</code></pre><p><img src="/2018/03/23/Jenkins-x-初体验/1.png" alt="BCD2E1E0-120A-437D-BAA8-45063C6EB472"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/2.png" alt="7BEA60BF-DF0D-4C7A-B6E9-1B5A47ABB044"></p>
 </li>
 <li><p>输入 jx 应该能看到如下输出</p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/FF788CC8-2DAB-4746-A4B3-CAA1FA39B651.png" alt="FF788CC8-2DAB-4746-A4B3-CAA1FA39B651"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/3.png" alt="FF788CC8-2DAB-4746-A4B3-CAA1FA39B651"></p>
 </li>
 <li><p>create local cluster for test </p>
 <pre><code>jx create cluster minikube
-</code></pre><p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/8EB823BF-1243-4810-91DE-A7C1BDCE7D52.png" alt="8EB823BF-1243-4810-91DE-A7C1BDCE7D52"></p>
+</code></pre><p><img src="/2018/03/23/Jenkins-x-初体验/4.png" alt="8EB823BF-1243-4810-91DE-A7C1BDCE7D52"></p>
 <p>这个过程比较长，有几个步骤</p>
 <ol>
 <li><p>为 minikube 分配内存、CPU、driver</p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/23F0BC70-9546-4B83-95C6-4423D9487066.png" alt="23F0BC70-9546-4B83-95C6-4423D9487066"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/5.png" alt="23F0BC70-9546-4B83-95C6-4423D9487066"></p>
 </li>
 <li><p>之后会下载 minikube 的镜像与 localKube 的 binary，并启动 kubernetes, 设置 RBAC</p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/264EF2E6-8157-43F0-AA99-55AE575C22C3.png" alt="264EF2E6-8157-43F0-AA99-55AE575C22C3"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/6.png" alt="264EF2E6-8157-43F0-AA99-55AE575C22C3"></p>
 </li>
 <li><p>jx 使用 helm 来管理 kubernetes 上的应用，所以会在 k8s 上初始 helm 的 server(tiller)。</p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BBE46796-9FF6-4017-950B-3DE22BFD8000.png" alt="BBE46796-9FF6-4017-950B-3DE22BFD8000"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/7.png" alt="BBE46796-9FF6-4017-950B-3DE22BFD8000"></p>
 </li>
 <li><p>安装 NGINX Ingress Controller</p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/13F0CE13-3C50-43E6-9951-DC27320E2612.png" alt="13F0CE13-3C50-43E6-9951-DC27320E2612"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/8.png" alt="13F0CE13-3C50-43E6-9951-DC27320E2612"></p>
 </li>
 <li><p>设置 Github 的 API Token，点击生成的 URL，生成一个 API Token</p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/1AF8588B-0F43-489D-B5FC-20150DC68BC1.png" alt="1AF8588B-0F43-489D-B5FC-20150DC68BC1"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/9.png" alt="1AF8588B-0F43-489D-B5FC-20150DC68BC1"></p>
 </li>
 <li><p>设置 Jenkins 的 API Token</p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/555D794A-106A-4AEC-ACF2-304506C4D743.png" alt="555D794A-106A-4AEC-ACF2-304506C4D743"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/10.png" alt="555D794A-106A-4AEC-ACF2-304506C4D743"></p>
 </li>
 <li><p>等待一段时间，jx 会在 k8s 上部署包括 jenkins、nexus等应用，部署完成会出现</p>
-<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/C86BDC07-0241-454C-B11E-FAF19C467030.png" alt="C86BDC07-0241-454C-B11E-FAF19C467030"></p>
+<p><img src="/2018/03/23/Jenkins-x-初体验/11.png" alt="C86BDC07-0241-454C-B11E-FAF19C467030"></p>
 </li>
 </ol>
 </li>
