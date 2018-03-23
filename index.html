@@ -285,6 +285,169 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://poytr1.github.io/2018/03/22/Jenkin-x-初体验/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Peterson Xu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Freedom Is Slavery Ignorance Is Strength">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/22/Jenkin-x-初体验/" itemprop="url">Jenkin X 初体验</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T17:51:33+08:00">
+                2018-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Jenkins-X-初体验"><a href="#Jenkins-X-初体验" class="headerlink" title="Jenkins X 初体验"></a>Jenkins X 初体验</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>Jenkins X 是一个高度集成化的CI/CD平台，基于Jenkins和Kubernetes实现，旨在解决微服务体系架构下的云原生应用的持续交付的问题，简化整个云原生应用的开发、运行和部署过程。</p>
+</blockquote>
+<p>官方链接: <a href="http://jenkins-x.io/" target="_blank" rel="external">http://jenkins-x.io/</a></p>
+<h2 id="安装（for-macOS）"><a href="#安装（for-macOS）" class="headerlink" title="安装（for macOS）"></a>安装（for macOS）</h2><ul>
+<li><p>install Jenkins X with brew </p>
+<pre><code>brew tap jenkins-x/jx
+brew install jx
+</code></pre><p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BCD2E1E0-120A-437D-BAA8-45063C6EB472.png" alt="BCD2E1E0-120A-437D-BAA8-45063C6EB472"></p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/7BEA60BF-DF0D-4C7A-B6E9-1B5A47ABB044.png" alt="7BEA60BF-DF0D-4C7A-B6E9-1B5A47ABB044"></p>
+</li>
+<li><p>输入 jx 应该能看到如下输出</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/FF788CC8-2DAB-4746-A4B3-CAA1FA39B651.png" alt="FF788CC8-2DAB-4746-A4B3-CAA1FA39B651"></p>
+</li>
+<li><p>create local cluster for test </p>
+<pre><code>jx create cluster minikube
+</code></pre><p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/8EB823BF-1243-4810-91DE-A7C1BDCE7D52.png" alt="8EB823BF-1243-4810-91DE-A7C1BDCE7D52"></p>
+<p>这个过程比较长，有几个步骤</p>
+<ol>
+<li><p>为 minikube 分配内存、CPU、driver</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/23F0BC70-9546-4B83-95C6-4423D9487066.png" alt="23F0BC70-9546-4B83-95C6-4423D9487066"></p>
+</li>
+<li><p>之后会下载 minikube 的镜像与 localKube 的 binary，并启动 kubernetes, 设置 RBAC</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/264EF2E6-8157-43F0-AA99-55AE575C22C3.png" alt="264EF2E6-8157-43F0-AA99-55AE575C22C3"></p>
+</li>
+<li><p>jx 使用 helm 来管理 kubernetes 上的应用，所以会在 k8s 上初始 helm 的 server(tiller)。</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BBE46796-9FF6-4017-950B-3DE22BFD8000.png" alt="BBE46796-9FF6-4017-950B-3DE22BFD8000"></p>
+</li>
+<li><p>安装 NGINX Ingress Controller</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/13F0CE13-3C50-43E6-9951-DC27320E2612.png" alt="13F0CE13-3C50-43E6-9951-DC27320E2612"></p>
+</li>
+<li><p>设置 Github 的 API Token，点击生成的 URL，生成一个 API Token</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/1AF8588B-0F43-489D-B5FC-20150DC68BC1.png" alt="1AF8588B-0F43-489D-B5FC-20150DC68BC1"></p>
+</li>
+<li><p>设置 Jenkins 的 API Token</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/555D794A-106A-4AEC-ACF2-304506C4D743.png" alt="555D794A-106A-4AEC-ACF2-304506C4D743"></p>
+</li>
+<li><p>等待一段时间，jx 会在 k8s 上部署包括 jenkins、nexus等应用，部署完成会出现</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/C86BDC07-0241-454C-B11E-FAF19C467030.png" alt="C86BDC07-0241-454C-B11E-FAF19C467030"></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>这里可以参考官方 demo: <a href="https://www.youtube.com/watch?v=kPes3rvT1UM" target="_blank" rel="external">demonstration of Jenkins X</a></p>
+<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><p>在使用 Jenkins X 的时候，感觉还是有些坑的，我简单地罗列了一下：</p>
+<ol>
+<li>确保你的 kubectl 的版本要 &gt;= 1.6</li>
+<li>对于较高版本的 macOS，需要升级 homebrew</li>
+<li>在使用 minikube delete 的时候遇到了一下系统权限的问题，可能是 Bug</li>
+</ol>
+<p>其实 jx 是简单地整合了 CI &amp; CD 在云原生应用上的工具链，包括 Helm 、k8s、Draft，对于用户而言，隐藏了很多繁琐的配置。但从目前的版本上看，jx才刚刚起步，我们可以看到在其官方的 roadmap 中，关于 Tools、Git Providers、Issue Trackers 方面还有很多路要走，这肯定需要开源社区的努力，另外在企业定制化方面可能也需要有更多的思考，这是一个通用的工具链不得不面对的问题。</p>
+<p>关于 jx 的未来，我们拭目以待。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://poytr1.github.io/2017/06/22/EDSL-With-Typed-Lambda-Calculus-Implemented-In-Haskell/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1525,7 +1688,7 @@ str<span class="token operator">=</span>null<span class="token punctuation">;</s
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1538,7 +1701,7 @@ str<span class="token operator">=</span>null<span class="token punctuation">;</s
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -1587,7 +1750,7 @@ str<span class="token operator">=</span>null<span class="token punctuation">;</s
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

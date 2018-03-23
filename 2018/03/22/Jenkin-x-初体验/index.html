@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Coq," />
+  <meta name="keywords" content="DevOps," />
 
 
 
@@ -95,31 +95,46 @@
 
 
 
-<meta name="description" content="macOS Sierra下配置spacemacs+proof-general+coq
-替换homebrew现有的上游，这里使用清华源。(如果之前已经配置过可以无视~)
-$ cd &quot;$(brew --repo)&quot;
-$ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+<meta name="description" content="Jenkins X 初体验前言
+Jenkins X 是一个高度集成化的CI/CD平台，基于Jenkins和Kubernetes实现，旨在解决微服务体系架构下的云原生应用的持续交付的问题，简化整个云原生应用的开发、运行和部署过程。
 
-$ cd &quot;">
+官方链接: http://jenkins-x.io/
+安装（for macOS）
+install Jenkins X with brew 
+brew tap jenki">
 <meta property="og:type" content="article">
-<meta property="og:title" content="macOS Sierra下配置spacemacs+proof-general+coq">
-<meta property="og:url" content="http://poytr1.github.io/2017/03/28/'spacemacs+proof-general+coq'/index.html">
+<meta property="og:title" content="Jenkin X 初体验">
+<meta property="og:url" content="http://poytr1.github.io/2018/03/22/Jenkin-x-初体验/index.html">
 <meta property="og:site_name" content="Freedom Is Slavery Ignorance Is Strength">
-<meta property="og:description" content="macOS Sierra下配置spacemacs+proof-general+coq
-替换homebrew现有的上游，这里使用清华源。(如果之前已经配置过可以无视~)
-$ cd &quot;$(brew --repo)&quot;
-$ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+<meta property="og:description" content="Jenkins X 初体验前言
+Jenkins X 是一个高度集成化的CI/CD平台，基于Jenkins和Kubernetes实现，旨在解决微服务体系架构下的云原生应用的持续交付的问题，简化整个云原生应用的开发、运行和部署过程。
 
-$ cd &quot;">
-<meta property="og:updated_time" content="2017-07-09T02:57:51.000Z">
+官方链接: http://jenkins-x.io/
+安装（for macOS）
+install Jenkins X with brew 
+brew tap jenki">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BCD2E1E0-120A-437D-BAA8-45063C6EB472.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/7BEA60BF-DF0D-4C7A-B6E9-1B5A47ABB044.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/FF788CC8-2DAB-4746-A4B3-CAA1FA39B651.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/8EB823BF-1243-4810-91DE-A7C1BDCE7D52.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/23F0BC70-9546-4B83-95C6-4423D9487066.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/264EF2E6-8157-43F0-AA99-55AE575C22C3.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BBE46796-9FF6-4017-950B-3DE22BFD8000.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/13F0CE13-3C50-43E6-9951-DC27320E2612.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/1AF8588B-0F43-489D-B5FC-20150DC68BC1.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/555D794A-106A-4AEC-ACF2-304506C4D743.png">
+<meta property="og:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/C86BDC07-0241-454C-B11E-FAF19C467030.png">
+<meta property="og:updated_time" content="2018-03-23T09:32:27.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="macOS Sierra下配置spacemacs+proof-general+coq">
-<meta name="twitter:description" content="macOS Sierra下配置spacemacs+proof-general+coq
-替换homebrew现有的上游，这里使用清华源。(如果之前已经配置过可以无视~)
-$ cd &quot;$(brew --repo)&quot;
-$ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+<meta name="twitter:title" content="Jenkin X 初体验">
+<meta name="twitter:description" content="Jenkins X 初体验前言
+Jenkins X 是一个高度集成化的CI/CD平台，基于Jenkins和Kubernetes实现，旨在解决微服务体系架构下的云原生应用的持续交付的问题，简化整个云原生应用的开发、运行和部署过程。
 
-$ cd &quot;">
+官方链接: http://jenkins-x.io/
+安装（for macOS）
+install Jenkins X with brew 
+brew tap jenki">
+<meta name="twitter:image" content="http://poytr1.github.io/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BCD2E1E0-120A-437D-BAA8-45063C6EB472.png">
 
 
 
@@ -147,13 +162,13 @@ $ cd &quot;">
 
 
 
-  <link rel="canonical" href="http://poytr1.github.io/2017/03/28/'spacemacs+proof-general+coq'/"/>
+  <link rel="canonical" href="http://poytr1.github.io/2018/03/22/Jenkin-x-初体验/"/>
 
 
 
 
 
-  <title>macOS Sierra下配置spacemacs+proof-general+coq | Freedom Is Slavery Ignorance Is Strength</title>
+  <title>Jenkin X 初体验 | Freedom Is Slavery Ignorance Is Strength</title>
   
 
 
@@ -302,7 +317,7 @@ $ cd &quot;">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://poytr1.github.io/2017/03/28/'spacemacs+proof-general+coq'/">
+    <link itemprop="mainEntityOfPage" href="http://poytr1.github.io/2018/03/22/Jenkin-x-初体验/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Peterson Xu">
@@ -319,7 +334,7 @@ $ cd &quot;">
 
         
         
-          <h1 class="post-title" itemprop="name headline">macOS Sierra下配置spacemacs+proof-general+coq</h1>
+          <h1 class="post-title" itemprop="name headline">Jenkin X 初体验</h1>
         
 
         <div class="post-meta">
@@ -331,8 +346,8 @@ $ cd &quot;">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-28T22:16:49+08:00">
-                2017-03-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T17:51:33+08:00">
+                2018-03-22
               </time>
             
 
@@ -366,51 +381,58 @@ $ cd &quot;">
       
 
       
-        <h1 id="macOS-Sierra下配置spacemacs-proof-general-coq"><a href="#macOS-Sierra下配置spacemacs-proof-general-coq" class="headerlink" title="macOS Sierra下配置spacemacs+proof-general+coq"></a>macOS Sierra下配置spacemacs+proof-general+coq</h1><ol>
-<li><p>替换<strong>homebrew</strong>现有的上游，这里使用清华源。(如果之前已经配置过可以无视~)</p>
-<pre class=" language-Shell"><code class="language-Shell">$ cd "$(brew --repo)"
-$ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
-
-$ cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-$ git remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
-
-$ brew update
-</code></pre>
+        <h1 id="Jenkins-X-初体验"><a href="#Jenkins-X-初体验" class="headerlink" title="Jenkins X 初体验"></a>Jenkins X 初体验</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>Jenkins X 是一个高度集成化的CI/CD平台，基于Jenkins和Kubernetes实现，旨在解决微服务体系架构下的云原生应用的持续交付的问题，简化整个云原生应用的开发、运行和部署过程。</p>
+</blockquote>
+<p>官方链接: <a href="http://jenkins-x.io/" target="_blank" rel="external">http://jenkins-x.io/</a></p>
+<h2 id="安装（for-macOS）"><a href="#安装（for-macOS）" class="headerlink" title="安装（for macOS）"></a>安装（for macOS）</h2><ul>
+<li><p>install Jenkins X with brew </p>
+<pre><code>brew tap jenkins-x/jx
+brew install jx
+</code></pre><p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BCD2E1E0-120A-437D-BAA8-45063C6EB472.png" alt="BCD2E1E0-120A-437D-BAA8-45063C6EB472"></p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/7BEA60BF-DF0D-4C7A-B6E9-1B5A47ABB044.png" alt="7BEA60BF-DF0D-4C7A-B6E9-1B5A47ABB044"></p>
 </li>
-<li><p>用<strong>homebrew</strong>下载<strong>proof-general</strong></p>
-<pre class=" language-shell"><code class="language-shell">$ brew install proof-general
-</code></pre>
+<li><p>输入 jx 应该能看到如下输出</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/FF788CC8-2DAB-4746-A4B3-CAA1FA39B651.png" alt="FF788CC8-2DAB-4746-A4B3-CAA1FA39B651"></p>
 </li>
-<li><p>用<strong>homebrew</strong>下载<strong>emacs-plus</strong></p>
-<pre class=" language-shell"><code class="language-shell">$ brew tap d12frosted/emacs-plus
-$ brew install emacs-plus
-$ brew linkapps emacs-plus
-</code></pre>
+<li><p>create local cluster for test </p>
+<pre><code>jx create cluster minikube
+</code></pre><p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/8EB823BF-1243-4810-91DE-A7C1BDCE7D52.png" alt="8EB823BF-1243-4810-91DE-A7C1BDCE7D52"></p>
+<p>这个过程比较长，有几个步骤</p>
+<ol>
+<li><p>为 minikube 分配内存、CPU、driver</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/23F0BC70-9546-4B83-95C6-4423D9487066.png" alt="23F0BC70-9546-4B83-95C6-4423D9487066"></p>
 </li>
-<li><p>如果之前没有<em>Emacs configuration</em>，(可以看看有没有文件夹<strong>~/.emacs.d</strong>，没有的话就是之前没有配置过)，直接git clone spacemacs即可</p>
-<pre class=" language-shell"><code class="language-shell">$ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-</code></pre>
-<p>如果目录下已经有文件了，不想保存之前的配置的话，直接<code>rm -rf</code>删除文件夹即可，如果想保留之前的配置，<a href="[https://github.com/syl20bnr/spacemacs#install](https://github.com/syl20bnr/spacemacs#install">这里</a>)有详细的说明。</p>
+<li><p>之后会下载 minikube 的镜像与 localKube 的 binary，并启动 kubernetes, 设置 RBAC</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/264EF2E6-8157-43F0-AA99-55AE575C22C3.png" alt="264EF2E6-8157-43F0-AA99-55AE575C22C3"></p>
 </li>
-<li><p>先启动一次，更新一些配置，并且设置一些初始的选项，比如使用vim模式还是其他的等等，这里按照个人喜好即可。之后在根目录会生成spacemacs的配置文件<em>.spacemacs</em>。</p>
-<pre class=" language-shell"><code class="language-shell">$ emacs --insecure
-</code></pre>
+<li><p>jx 使用 helm 来管理 kubernetes 上的应用，所以会在 k8s 上初始 helm 的 server(tiller)。</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/BBE46796-9FF6-4017-950B-3DE22BFD8000.png" alt="BBE46796-9FF6-4017-950B-3DE22BFD8000"></p>
 </li>
-<li><p>下载<strong>spacemacs-coq layer</strong>，并在<strong>~/.spacemacs</strong>文件里的<code>dotspacemacs-configuration-layers</code>中添加<strong>coq</strong>的支持。</p>
-<pre class=" language-shell"><code class="language-shell">git clone https://github.com/olivierverdier/spacemacs-coq ~/.emacs.d/private/coq
-</code></pre>
+<li><p>安装 NGINX Ingress Controller</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/13F0CE13-3C50-43E6-9951-DC27320E2612.png" alt="13F0CE13-3C50-43E6-9951-DC27320E2612"></p>
 </li>
-<li><p>更改<em>emacs</em> package的安装源，同样修改<strong>~/.spacemacs</strong>文件，<code>user-init</code>中添加：</p>
-<pre class=" language-lisp"><code class="language-lisp">(setq configuration-layer--elpa-archives
-  '(("melpai-cn" . "http://elpa.zilongshanren.com/melpa/")
-    ("org-cn"   . "http://elpa.zilongshanren.com/org/")
-    ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
-</code></pre>
+<li><p>设置 Github 的 API Token，点击生成的 URL，生成一个 API Token</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/1AF8588B-0F43-489D-B5FC-20150DC68BC1.png" alt="1AF8588B-0F43-489D-B5FC-20150DC68BC1"></p>
 </li>
-<li><p>重新启动emacs，等待自动安装<strong>Company-Coq</strong>，这样就配置完成啦。</p>
+<li><p>设置 Jenkins 的 API Token</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/555D794A-106A-4AEC-ACF2-304506C4D743.png" alt="555D794A-106A-4AEC-ACF2-304506C4D743"></p>
+</li>
+<li><p>等待一段时间，jx 会在 k8s 上部署包括 jenkins、nexus等应用，部署完成会出现</p>
+<p><img src="/Users/poytr1/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/932446461/QQ/Temp.db/C86BDC07-0241-454C-B11E-FAF19C467030.png" alt="C86BDC07-0241-454C-B11E-FAF19C467030"></p>
 </li>
 </ol>
-<p>PS：在此之前我已经安装了过了OCaml与CoqIDE</p>
+</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>这里可以参考官方 demo: <a href="https://www.youtube.com/watch?v=kPes3rvT1UM" target="_blank" rel="external">demonstration of Jenkins X</a></p>
+<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><p>在使用 Jenkins X 的时候，感觉还是有些坑的，我简单地罗列了一下：</p>
+<ol>
+<li>确保你的 kubectl 的版本要 &gt;= 1.6</li>
+<li>对于较高版本的 macOS，需要升级 homebrew</li>
+<li>在使用 minikube delete 的时候遇到了一下系统权限的问题，可能是 Bug</li>
+</ol>
+<p>其实 jx 是简单地整合了 CI &amp; CD 在云原生应用上的工具链，包括 Helm 、k8s、Draft，对于用户而言，隐藏了很多繁琐的配置。但从目前的版本上看，jx才刚刚起步，我们可以看到在其官方的 roadmap 中，关于 Tools、Git Providers、Issue Trackers 方面还有很多路要走，这肯定需要开源社区的努力，另外在企业定制化方面可能也需要有更多的思考，这是一个通用的工具链不得不面对的问题。</p>
+<p>关于 jx 的未来，我们拭目以待。</p>
 
       
     </div>
@@ -440,7 +462,7 @@ $ brew linkapps emacs-plus
       
         <div class="post-tags">
           
-            <a href="/tags/Coq/" rel="tag"># Coq</a>
+            <a href="/tags/DevOps/" rel="tag"># DevOps</a>
           
         </div>
       
@@ -453,8 +475,8 @@ $ brew linkapps emacs-plus
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/15/说一说'Monads'/" rel="next" title="说一说'Monads'">
-                <i class="fa fa-chevron-left"></i> 说一说'Monads'
+              <a href="/2017/06/22/EDSL-With-Typed-Lambda-Calculus-Implemented-In-Haskell/" rel="next" title="EDSL With Typed Lambda Calculus Implemented In Haskell">
+                <i class="fa fa-chevron-left"></i> EDSL With Typed Lambda Calculus Implemented In Haskell
               </a>
             
           </div>
@@ -462,10 +484,6 @@ $ brew linkapps emacs-plus
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/22/EDSL-With-Typed-Lambda-Calculus-Implemented-In-Haskell/" rel="prev" title="EDSL With Typed Lambda Calculus Implemented In Haskell">
-                EDSL With Typed Lambda Calculus Implemented In Haskell <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -592,7 +610,7 @@ $ brew linkapps emacs-plus
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#macOS-Sierra下配置spacemacs-proof-general-coq"><span class="nav-number">1.</span> <span class="nav-text">macOS Sierra下配置spacemacs+proof-general+coq</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Jenkins-X-初体验"><span class="nav-number">1.</span> <span class="nav-text">Jenkins X 初体验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装（for-macOS）"><span class="nav-number">1.2.</span> <span class="nav-text">安装（for macOS）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">1.3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#感受"><span class="nav-number">1.4.</span> <span class="nav-text">感受</span></a></li></ol></li></ol></div>
             
 
           </div>
