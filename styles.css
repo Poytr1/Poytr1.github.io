@@ -57,9 +57,23 @@
     mix-blend-mode:multiply;
   }
   @media (max-width:760px){
-    /* drop the inner faint sketches and shrink edge ones on small screens */
+    /* iOS Safari mishandles fixed background layers — anchor to the document instead,
+       and show a small, evenly-spread subset (top/middle/bottom, both sides). */
+    body{ position:relative; }
+    .decor{ position:absolute; height:100%; }
     .decor .d{ display:none; }
-    .decor .d:nth-child(-n+4){ display:block; width:110px !important; opacity:.22 !important; }
+    .decor .d:nth-child(1),   /* maize   — top left    */
+    .decor .d:nth-child(5),   /* deer    — top right   */
+    .decor .d:nth-child(6),   /* pumpkin — mid-up left */
+    .decor .d:nth-child(8),   /* owl     — mid-up right*/
+    .decor .d:nth-child(11),  /* clove   — mid-low left*/
+    .decor .d:nth-child(13),  /* flower1 — mid-low right*/
+    .decor .d:nth-child(14),  /* wormwood— bottom left */
+    .decor .d:nth-child(18){  /* melissa — bottom right*/
+      display:block;
+      width:96px !important;
+      opacity:.20 !important;
+    }
   }
 
 
