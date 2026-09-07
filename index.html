@@ -1,279 +1,370 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pengcheng Xu &mdash; Engineer &amp; Researcher</title>
-<meta name="description" content="Pengcheng Xu — systems engineer and independent researcher working at the intersection of compilers, runtimes, and LLM-agent systems.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="decor" aria-hidden="true">
-  <img class="d" src="sketches/maize.png" style="top:4.0%; left:6.0%; width:147px; opacity:0.34; transform:rotate(-6deg);">
-  <img class="d" src="sketches/chili.png" style="top:4.4%; left:27.5%; width:136px; opacity:0.25; transform:rotate(4deg);">
-  <img class="d" src="sketches/gentian.png" style="top:4.9%; left:49.0%; width:131px; opacity:0.21; transform:rotate(2deg);">
-  <img class="d" src="sketches/melon.png" style="top:5.3%; left:66.4%; width:136px; opacity:0.25; transform:rotate(0deg);">
-  <img class="d" src="sketches/deer.png" style="top:5.8%; left:86.0%; width:147px; opacity:0.34; transform:rotate(-1deg);">
-  <img class="d" src="sketches/pumpkin.png" style="top:33.5%; left:9.4%; width:133px; opacity:0.23; transform:rotate(-3deg);">
-  <img class="d" src="sketches/beans.png" style="top:34.0%; left:26.9%; width:117px; opacity:0.12; transform:rotate(-4deg);">
-  <img class="d" src="sketches/owl.png" style="top:34.4%; left:68.4%; width:117px; opacity:0.12; transform:rotate(5deg);">
-  <img class="d" src="sketches/plant1.png" style="top:34.9%; left:86.0%; width:133px; opacity:0.23; transform:rotate(3deg);">
-  <img class="d" src="sketches/gourd.png" style="top:62.6%; left:7.3%; width:133px; opacity:0.23; transform:rotate(1deg);">
-  <img class="d" src="sketches/clove.png" style="top:59.1%; left:28.8%; width:117px; opacity:0.12; transform:rotate(0deg);">
-  <img class="d" src="sketches/tansy.png" style="top:59.5%; left:66.3%; width:117px; opacity:0.12; transform:rotate(-1deg);">
-  <img class="d" src="sketches/flower1.png" style="top:59.9%; left:86.0%; width:133px; opacity:0.23; transform:rotate(-3deg);">
-  <img class="d" src="sketches/wormwood.png" style="top:87.7%; left:9.2%; width:147px; opacity:0.34; transform:rotate(-5deg);">
-  <img class="d" src="sketches/fennel.png" style="top:88.2%; left:26.7%; width:136px; opacity:0.25; transform:rotate(4deg);">
-  <img class="d" src="sketches/berberis.png" style="top:88.6%; left:48.2%; width:131px; opacity:0.21; transform:rotate(3deg);">
-  <img class="d" src="sketches/carlina.png" style="top:89.0%; left:69.7%; width:136px; opacity:0.25; transform:rotate(1deg);">
-  <img class="d" src="sketches/melissa.png" style="top:89.5%; left:86.0%; width:147px; opacity:0.34; transform:rotate(0deg);">
-</div>
-
-<main class="page">
-<nav class="site-nav" aria-label="Primary">
-  <a href="index.html" aria-current="page">Home</a>
-  <span class="nav-sep" aria-hidden="true">&#9670;</span>
-  <a href="projects.html">Projects</a>
-  <span class="nav-sep" aria-hidden="true">&#9670;</span>
-  <a href="news.html">News</a>
-  <span class="nav-sep" aria-hidden="true">&#9670;</span>
-  <a href="articles.html">Writing</a>
-</nav>
-  <header class="hero">
-    <div class="pediment">Engineer&nbsp;&middot;&nbsp;Researcher</div>
-    <div class="facade">
-      <span class="capital left"></span><span class="capital right"></span>
-      <span class="base left"></span><span class="base right"></span>
-      <h1 class="name">
-        <span class="given">Pengcheng</span>
-        <span class="family">Xu</span>
-      </h1>
-    </div>
-    <div class="hero-rule" role="presentation"></div>
-    <p class="title">Engineer &amp; Researcher</p>
-    <p class="subtitle">Compilers &middot; Runtimes &middot; LLM-Agent Systems</p>
-    <address class="contacts">
-      <span class="item"><a href="mailto:pooytr1@gmail.com">pooytr1@gmail.com</a></span>
-      <span class="sep" aria-hidden="true">&#9670;</span>
-      <span class="item"><a href="https://github.com/Poytr1" target="_blank" rel="noopener">github.com/Poytr1</a></span>
-      <span class="sep" aria-hidden="true">&#9670;</span>
-      <span class="item">Shanghai, China</span>
-    </address>
-  </header>
-<section id="about" aria-labelledby="about-head">
-    <div class="section-head">
-      <h2 class="section-label" id="about-head">About</h2>
-      <div class="section-rule" role="presentation"></div>
-    </div>
-    <p class="summary">
-      <span class="lead-cap">Engineer-researcher hybrid</span> — a systems engineer and independent
-      researcher working at the intersection of compilers, runtimes, and LLM-agent systems.
-    </p>
-    <p class="summary">
-      I spend my days building cloud-scale compiler, runtime, and streaming infrastructure, and my own
-      hours researching and shipping LLM-agent tooling and developer infrastructure — turning stochastic
-      agent behavior into the kind of deterministic, low-cost systems engineering I trust.
-    </p>
-    <p class="credibility">
-      Tech Lead at <strong>Microsoft</strong> (Fabric Eventstreams), previously <strong>Elastic</strong>
-      &middot; 8+ years of cloud-scale compiler / runtime / streaming infrastructure.
-    </p>
-  </section>
-<section id="research" aria-labelledby="research-head">
-    <div class="section-head">
-      <h2 class="section-label" id="research-head">Research Interests</h2>
-      <div class="section-rule" role="presentation"></div>
-    </div>
-    <ul class="themes">
-      <li>LLM agent systems &amp; orchestration
-        <span>Agentic workflows, tool-use, supervisor graphs</span>
-      </li>
-      <li>Inference-cost &amp; latency optimization
-        <span>Making autonomous agents cheaper and faster to run</span>
-      </li>
-      <li>Compilers, IR/DAG &amp; code generation
-        <span>For streaming and data systems</span>
-      </li>
-      <li>Runtime sandboxing &amp; secure execution
-        <span>Multi-tenant isolation for untrusted workloads</span>
-      </li>
-      <li>Developer tooling &amp; program intelligence
-        <span>Release intelligence, code navigation, build &amp; delta analysis</span>
-      </li>
-    </ul>
-  </section>
-
-  <section id="projects-teaser" aria-labelledby="pt-head">
-    <div class="section-head">
-      <h2 class="section-label" id="pt-head">Projects</h2>
-      <div class="section-rule" role="presentation"></div>
-    </div>
-    <p class="summary" style="font-size:1.08rem;">
-      Open-source tools and research spanning LLM-agent systems, developer tooling, and compilers.
-    </p>
-    <p class="inline-links" style="justify-content:center;margin-top:18px;">
-      <a href="projects.html">View all projects &rarr;</a>
-    </p>
-  </section>
-
-<section id="selected-work" aria-labelledby="selected-head">
-    <div class="section-head">
-      <h2 class="section-label" id="selected-head">Selected Work &amp; Research</h2>
-      <div class="section-rule" role="presentation"></div>
-    </div>
-
-    <div class="work-list">
-      <article class="work-item">
-        <h3 class="work-title">
-          <span>Eventstreams V3 Topology Re-architecture</span>
-          <span class="work-meta">Microsoft Fabric &middot; 2023&ndash;Present</span>
-        </h3>
-        <p class="work-desc">
-          As acting Tech Lead, re-architected the core real-time streaming engine onto a unified backend
-          compilation pipeline and a high-performance IR/DAG framework. Serves Fabric customers globally
-          at ~5M events/day with ~180% YoY growth.
-        </p>
-        <p class="work-tag">Compiler / IR / DAG &middot; codegen &middot; distributed streaming</p>
-      </article>
-
-      <article class="work-item">
-        <h3 class="work-title">
-          <span>Sentio.xyz Agent Orchestration</span>
-          <span class="work-meta">Open-source contributor &middot; 348+ commits</span>
-        </h3>
-        <p class="work-desc">
-          Designed and shipped a LangGraph supervisor-graph agent orchestration system; built an LLM
-          processor code-generation agent with multi-chain support (EVM, Sui, Aptos, Move); owned the
-          EVM tracer, debugger, and Solidity language server.
-        </p>
-        <p class="work-tag">LLM agents &middot; supervisor graphs &middot; multi-chain codegen</p>
-      </article>
-
-      <article class="work-item">
-        <h3 class="work-title">
-          <span>NL &rarr; Streaming-Pipeline Agent</span>
-          <span class="work-meta">Microsoft org hackathon &middot; 2nd place &middot; Oct 2024</span>
-        </h3>
-        <p class="work-desc">
-          An LLM agent that compiles natural-language business constraints directly into deployable
-          Fabric Eventstreams pipelines.
-        </p>
-        <p class="work-tag">LLM agents &middot; program synthesis &middot; streaming</p>
-      </article>
-    </div>
-  </section>
-<section id="background" aria-labelledby="background-head">
-    <div class="section-head">
-      <h2 class="section-label" id="background-head">Background</h2>
-      <div class="section-rule" role="presentation"></div>
-    </div>
-
-    <article class="entry">
-      <div class="entry-head">
-        <span class="entry-org">Microsoft</span>
-        <span class="entry-meta">Apr 2020 &ndash; Present &middot; Beijing &rarr; Shanghai</span>
-      </div>
-      <p class="entry-role">Technical Lead / Senior Software Engineer</p>
-      <p class="entry-note">
-        Fabric Eventstreams (acting Tech Lead), Azure Stream Analytics core engine, and Azure Synapse
-        Spark notebooks.
-      </p>
-    </article>
-
-    <article class="entry">
-      <div class="entry-head">
-        <span class="entry-org">Elastic</span>
-        <span class="entry-meta">May 2018 &ndash; Apr 2020 &middot; Beijing</span>
-      </div>
-      <p class="entry-role">Software Engineer</p>
-      <p class="entry-note">
-        Codesearch team (joined via the Insight.io acquisition); built a high-scale Java language server
-        on Eclipse JDT and LSP code-intelligence in Kibana.
-      </p>
-    </article>
-
-    <article class="entry">
-      <div class="entry-head">
-        <span class="entry-org">YITU Technology</span>
-        <span class="entry-meta">Jul 2017 &ndash; Apr 2018 &middot; Shanghai</span>
-      </div>
-      <p class="entry-role">Software Engineer Intern &mdash; Infrastructure</p>
-      <p class="entry-note">
-        Infrastructure and tooling across a high-availability inference platform.
-      </p>
-    </article>
-
-    <p class="inline-links">
-      <span class="lbl">Upstream open-source</span>
-      <a href="https://github.com/microsoft/Trill" target="_blank" rel="noopener">microsoft/Trill</a>
-      <span class="sep" aria-hidden="true">&#9670;</span>
-      <a href="https://github.com/tikv/tikv" target="_blank" rel="noopener">tikv/tikv</a>
-      <span class="sep" aria-hidden="true">&#9670;</span>
-      <a href="https://github.com/elastic/kibana" target="_blank" rel="noopener">elastic/kibana</a>
-    </p>
-  </section>
-<section id="education" aria-labelledby="edu-head">
-    <div class="section-head">
-      <h2 class="section-label" id="edu-head">Education</h2>
-      <div class="section-rule" role="presentation"></div>
-    </div>
-    <div class="edu">
-      <p class="school">University of Science and Technology of China</p>
-      <p class="degree">B.Sc. Computer Science &amp; Technology</p>
-      <p class="edu-meta">2014 &ndash; 2018 &middot; USTC</p>
-    </div>
-  </section>
-<section id="skills" aria-labelledby="skills-head">
-    <div class="section-head">
-      <h2 class="section-label" id="skills-head">Skills</h2>
-      <div class="section-rule" role="presentation"></div>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-block">
-        <h3>Languages</h3>
-        <div class="chips">
-          <span class="chip">C#</span><span class="chip">Python</span><span class="chip">Go</span>
-          <span class="chip">Rust</span><span class="chip">TypeScript</span><span class="chip">Java</span>
-          <span class="chip">C++</span><span class="chip">SQL</span><span class="chip">Scala</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengcheng Xu &mdash; Engineer &amp; Researcher</title>
+    <meta
+      name="description"
+      content="Pengcheng Xu — systems engineer and independent researcher working at the intersection of compilers, runtimes, and LLM-agent systems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=Libre+Caslon+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="theme-color" content="#283b30" />
+    <script src="site.js" defer></script>
+  </head>
+  <body class="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <a class="wordmark" href="index.html" aria-label="Pengcheng Xu, home"
+        >PX<span class="wordmark-dot">.</span></a
+      >
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a
+        ><a href="projects.html">Projects</a><a href="news.html">News</a
+        ><a href="articles.html">Writing</a>
+      </nav>
+      <a class="header-contact" href="mailto:pooytr1@gmail.com"
+        >Let’s talk <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main id="main">
+      <section class="opening" aria-labelledby="name">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> Engineer &amp;
+            independent researcher
+          </p>
+          <h1 id="name">Pengcheng<br /><em>Xu.</em></h1>
+          <p class="hero-statement">
+            From complex ideas<br />to systems that work.
+          </p>
+          <p class="hero-detail">
+            Compilers, runtimes, and LLM-agent systems.<br />Building at
+            Microsoft. Exploring what comes next.
+          </p>
+          <a class="button" href="projects.html"
+            >Explore my work <span aria-hidden="true">↗</span></a
+          >
         </div>
-      </div>
-      <div class="skill-block">
-        <h3>LLM &amp; Agents</h3>
-        <div class="chips">
-          <span class="chip">LLM agent design</span><span class="chip">Agentic workflows</span>
-          <span class="chip">Prompt/context engineering</span>
-          <span class="chip">Inference-cost optimization</span>
+        <figure class="hero-art">
+          <div class="plate-label">
+            <span>FIELD NOTES / 001</span><span>EXPLORATIONS IN SYSTEMS</span>
+          </div>
+          <div
+            class="art-image"
+            role="img"
+            aria-label="An antique-style natural history illustration of wildflowers, songbirds, butterflies and moths."
+          ></div>
+          <figcaption>
+            <span>Curiosity, made concrete.</span
+            ><span aria-hidden="true">↗</span>
+          </figcaption>
+        </figure>
+        <div class="hero-bottom">
+          <span>Based in Shanghai, China</span
+          ><a href="#about"
+            >A little about me <span aria-hidden="true">↓</span></a
+          ><span>Compilers · Runtimes · Agents</span>
         </div>
-      </div>
-      <div class="skill-block">
-        <h3>Systems</h3>
-        <div class="chips">
-          <span class="chip">Distributed systems</span><span class="chip">Compiler construction</span>
-          <span class="chip">LSP</span><span class="chip">IR/DAG</span>
-          <span class="chip">Runtime sandboxing</span><span class="chip">High-throughput streaming</span>
-        </div>
-      </div>
-      <div class="skill-block">
-        <h3>Infrastructure</h3>
-        <div class="chips">
-          <span class="chip">Azure Fabric</span><span class="chip">Stream Analytics</span>
-          <span class="chip">Synapse</span><span class="chip">OneLake</span>
-          <span class="chip">Elasticsearch</span><span class="chip">Docker</span>
-          <span class="chip">Linux</span><span class="chip">CI/CD</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="colophon">
-    <span class="mark" aria-hidden="true">&#9670;&ensp;&#9670;&ensp;&#9670;</span>
-    Pengcheng Xu &middot; Shanghai, China &middot;
-    <a href="mailto:pooytr1@gmail.com">pooytr1@gmail.com</a> &middot;
-    <a href="https://github.com/Poytr1" target="_blank" rel="noopener">github.com/Poytr1</a>
-  </footer>
+      </section>
+      <div class="content">
+        <section id="about" aria-labelledby="about-head">
+          <div class="section-head">
+            <h2 class="section-label" id="about-head">About</h2>
+            <div class="section-rule" role="presentation"></div>
+          </div>
+          <p class="summary">
+            I work where <em>systems engineering</em
+            ><br class="desktop-break" />
+            meets independent research.
+          </p>
+          <p class="summary">
+            I spend my days building cloud-scale compiler, runtime, and
+            streaming infrastructure, and my own hours researching and shipping
+            LLM-agent tooling and developer infrastructure — turning stochastic
+            agent behavior into the kind of deterministic, low-cost systems
+            engineering I trust.
+          </p>
+          <p class="credibility">
+            Tech Lead at <strong>Microsoft</strong> (Fabric Eventstreams),
+            previously <strong>Elastic</strong>
+            &middot; 8+ years of cloud-scale compiler / runtime / streaming
+            infrastructure.
+          </p>
+        </section>
+        <section id="research" aria-labelledby="research-head">
+          <div class="section-head">
+            <h2 class="section-label" id="research-head">
+              Current explorations
+            </h2>
+            <div class="section-rule" role="presentation"></div>
+          </div>
+          <ul class="themes">
+            <li>
+              LLM agent systems &amp; orchestration
+              <span>Agentic workflows, tool-use, supervisor graphs</span>
+            </li>
+            <li>
+              Inference-cost &amp; latency optimization
+              <span>Making autonomous agents cheaper and faster to run</span>
+            </li>
+            <li>
+              Compilers, IR/DAG &amp; code generation
+              <span>For streaming and data systems</span>
+            </li>
+            <li>
+              Runtime sandboxing &amp; secure execution
+              <span>Multi-tenant isolation for untrusted workloads</span>
+            </li>
+            <li>
+              Developer tooling &amp; program intelligence
+              <span
+                >Release intelligence, code navigation, build &amp; delta
+                analysis</span
+              >
+            </li>
+          </ul>
+        </section>
 
-</main>
-</body>
+        <section
+          class="project-callout"
+          id="projects-teaser"
+          aria-labelledby="pt-head"
+        >
+          <div class="section-head">
+            <h2 class="section-label" id="pt-head">Projects</h2>
+            <div class="section-rule" role="presentation"></div>
+          </div>
+          <p class="summary">
+            Open-source tools and research spanning LLM-agent systems, developer
+            tooling, and compilers.
+          </p>
+          <p class="inline-links">
+            <a href="projects.html"
+              >Explore the projects <span aria-hidden="true">↗</span></a
+            >
+          </p>
+        </section>
+
+        <section id="selected-work" aria-labelledby="selected-head">
+          <div class="section-head">
+            <h2 class="section-label" id="selected-head">Selected work</h2>
+            <div class="section-rule" role="presentation"></div>
+          </div>
+
+          <div class="work-list">
+            <article class="work-item">
+              <h3 class="work-title">
+                <span>Eventstreams V3 Topology Re-architecture</span>
+                <span class="work-meta"
+                  >Microsoft Fabric &middot; 2023&ndash;Present</span
+                >
+              </h3>
+              <p class="work-desc">
+                As acting Tech Lead, re-architected the core real-time streaming
+                engine onto a unified backend compilation pipeline and a
+                high-performance IR/DAG framework. Serves Fabric customers
+                globally at ~5M events/day with ~180% YoY growth.
+              </p>
+              <p class="work-tag">
+                Compiler / IR / DAG &middot; codegen &middot; distributed
+                streaming
+              </p>
+            </article>
+
+            <article class="work-item">
+              <h3 class="work-title">
+                <span>Sentio.xyz Agent Orchestration</span>
+                <span class="work-meta"
+                  >Open-source contributor &middot; 348+ commits</span
+                >
+              </h3>
+              <p class="work-desc">
+                Designed and shipped a LangGraph supervisor-graph agent
+                orchestration system; built an LLM processor code-generation
+                agent with multi-chain support (EVM, Sui, Aptos, Move); owned
+                the EVM tracer, debugger, and Solidity language server.
+              </p>
+              <p class="work-tag">
+                LLM agents &middot; supervisor graphs &middot; multi-chain
+                codegen
+              </p>
+            </article>
+
+            <article class="work-item">
+              <h3 class="work-title">
+                <span>NL &rarr; Streaming-Pipeline Agent</span>
+                <span class="work-meta"
+                  >Microsoft org hackathon &middot; 2nd place &middot; Oct
+                  2024</span
+                >
+              </h3>
+              <p class="work-desc">
+                An LLM agent that compiles natural-language business constraints
+                directly into deployable Fabric Eventstreams pipelines.
+              </p>
+              <p class="work-tag">
+                LLM agents &middot; program synthesis &middot; streaming
+              </p>
+            </article>
+          </div>
+        </section>
+        <section id="background" aria-labelledby="background-head">
+          <div class="section-head">
+            <h2 class="section-label" id="background-head">Background</h2>
+            <div class="section-rule" role="presentation"></div>
+          </div>
+
+          <article class="entry">
+            <div class="entry-head">
+              <span class="entry-org">Microsoft</span>
+              <span class="entry-meta"
+                >Apr 2020 &ndash; Present &middot; Beijing &rarr; Shanghai</span
+              >
+            </div>
+            <p class="entry-role">Technical Lead / Senior Software Engineer</p>
+            <p class="entry-note">
+              Fabric Eventstreams (acting Tech Lead), Azure Stream Analytics
+              core engine, and Azure Synapse Spark notebooks.
+            </p>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <span class="entry-org">Elastic</span>
+              <span class="entry-meta"
+                >May 2018 &ndash; Apr 2020 &middot; Beijing</span
+              >
+            </div>
+            <p class="entry-role">Software Engineer</p>
+            <p class="entry-note">
+              Codesearch team (joined via the Insight.io acquisition); built a
+              high-scale Java language server on Eclipse JDT and LSP
+              code-intelligence in Kibana.
+            </p>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <span class="entry-org">YITU Technology</span>
+              <span class="entry-meta"
+                >Jul 2017 &ndash; Apr 2018 &middot; Shanghai</span
+              >
+            </div>
+            <p class="entry-role">
+              Software Engineer Intern &mdash; Infrastructure
+            </p>
+            <p class="entry-note">
+              Infrastructure and tooling across a high-availability inference
+              platform.
+            </p>
+          </article>
+
+          <p class="inline-links">
+            <span class="lbl">Upstream open-source</span>
+            <a
+              href="https://github.com/microsoft/Trill"
+              target="_blank"
+              rel="noopener"
+              >microsoft/Trill</a
+            >
+            <span class="sep" aria-hidden="true">&#9670;</span>
+            <a
+              href="https://github.com/tikv/tikv"
+              target="_blank"
+              rel="noopener"
+              >tikv/tikv</a
+            >
+            <span class="sep" aria-hidden="true">&#9670;</span>
+            <a
+              href="https://github.com/elastic/kibana"
+              target="_blank"
+              rel="noopener"
+              >elastic/kibana</a
+            >
+          </p>
+        </section>
+        <section id="education" aria-labelledby="edu-head">
+          <div class="section-head">
+            <h2 class="section-label" id="edu-head">Education</h2>
+            <div class="section-rule" role="presentation"></div>
+          </div>
+          <div class="edu">
+            <p class="school">University of Science and Technology of China</p>
+            <p class="degree">B.Sc. Computer Science &amp; Technology</p>
+            <p class="edu-meta">2014 &ndash; 2018 &middot; USTC</p>
+          </div>
+        </section>
+        <section id="skills" aria-labelledby="skills-head">
+          <div class="section-head">
+            <h2 class="section-label" id="skills-head">Skills</h2>
+            <div class="section-rule" role="presentation"></div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-block">
+              <h3>Languages</h3>
+              <div class="chips">
+                <span class="chip">C#</span><span class="chip">Python</span
+                ><span class="chip">Go</span> <span class="chip">Rust</span
+                ><span class="chip">TypeScript</span
+                ><span class="chip">Java</span> <span class="chip">C++</span
+                ><span class="chip">SQL</span><span class="chip">Scala</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>LLM &amp; Agents</h3>
+              <div class="chips">
+                <span class="chip">LLM agent design</span
+                ><span class="chip">Agentic workflows</span>
+                <span class="chip">Prompt/context engineering</span>
+                <span class="chip">Inference-cost optimization</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>Systems</h3>
+              <div class="chips">
+                <span class="chip">Distributed systems</span
+                ><span class="chip">Compiler construction</span>
+                <span class="chip">LSP</span><span class="chip">IR/DAG</span>
+                <span class="chip">Runtime sandboxing</span
+                ><span class="chip">High-throughput streaming</span>
+              </div>
+            </div>
+            <div class="skill-block">
+              <h3>Infrastructure</h3>
+              <div class="chips">
+                <span class="chip">Azure Fabric</span
+                ><span class="chip">Stream Analytics</span>
+                <span class="chip">Synapse</span
+                ><span class="chip">OneLake</span>
+                <span class="chip">Elasticsearch</span
+                ><span class="chip">Docker</span> <span class="chip">Linux</span
+                ><span class="chip">CI/CD</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <a class="wordmark" href="index.html"
+        >Pengcheng Xu<span class="wordmark-dot">.</span></a
+      >
+      <div class="footer-meta">
+        Engineer &amp; researcher<br />Shanghai, China
+      </div>
+      <div class="footer-links">
+        <a href="mailto:pooytr1@gmail.com">Email ↗</a
+        ><a href="https://github.com/Poytr1" target="_blank" rel="noopener"
+          >GitHub ↗</a
+        ><a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
 </html>
