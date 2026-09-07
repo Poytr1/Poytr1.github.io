@@ -13,7 +13,7 @@ Run `npm run build` to produce `dist/`. The source HTML pages remain directly co
 ## Editing
 
 - `index.html`: introduction, interests, selected work, background, education, skills.
-- `projects.html`: the original four repositories and descriptions.
+- `projects.html`: AgentConnect as the current project, alongside the original four repositories.
 - `news.html` and `articles.html`: updates and the original writing-in-progress state.
 - `styles.css`: shared palette, type, layouts, responsive and print styles.
 - `site.js`: optional one-time section entrance, respecting reduced-motion settings. All content and navigation work without JavaScript.
@@ -21,3 +21,5 @@ Run `npm run build` to produce `dist/`. The source HTML pages remain directly co
 Public biographical content and repository links were retained from the original site. The natural-history background artwork is original AI-generated imagery; it does not reproduce Anthropic’s video frames. Existing assets are retained in source history.
 
 Reference: https://www.youtube.com/watch?v=Y9Wz2PV404E (closing butterfly/moth illustrations, approximately 1:48).
+
+Biography updated from the owner’s September 2026 corrections: Speak, Engineering, since July 2026. AgentConnect summary based on https://github.com/agentconnect-md/agentconnect/blob/main/README.md. Microsoft end year is recorded without inventing an exact departure month.
