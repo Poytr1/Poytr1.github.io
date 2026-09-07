@@ -180,32 +180,6 @@ img {
   font-size: 21px;
   line-height: 1;
 }
-.hero-art {
-  position: relative;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 44px;
-  overflow: hidden;
-}
-
-.art-image {
-  flex: 1;
-  min-height: 400px;
-  background-image: url("assets/natural-history.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  mix-blend-mode: multiply;
-  -webkit-mask-image:
-    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent),
-    linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent),
-    linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
-  mask-composite: intersect;
-}
 
 .hero-bottom {
   grid-column: 1/-1;
@@ -671,10 +645,6 @@ img {
     letter-spacing: 1.1px;
   }
 
-  .art-image {
-    min-height: 350px;
-  }
-
   .hero-bottom > span:last-child {
     display: none;
   }
@@ -730,14 +700,6 @@ img {
   }
   .hero-detail {
     font-size: 15px;
-  }
-  .hero-art {
-    margin-bottom: 28px;
-  }
-  .art-image {
-    min-height: 350px;
-    background-size: contain;
-    background-repeat: no-repeat;
   }
 
   .hero-bottom {
@@ -901,5 +863,291 @@ img {
   }
   .content {
     max-width: none;
+  }
+}
+
+/* An open book: one paper surface, quiet marginal illustrations. */
+:root {
+  --paper: #f4efe3;
+  --paper-deep: #eee7d8;
+  --ink: #343c32;
+  --accent: #86513b;
+  --line: #d6cfbd;
+}
+.site-header {
+  max-width: 1360px;
+  height: 94px;
+  border-bottom: 0;
+}
+.site-header .wordmark {
+  font-size: 31px;
+}
+.site-nav {
+  gap: 32px;
+}
+.opening {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: none;
+  min-height: 700px;
+  min-height: min(820px, calc(100svh - 94px));
+  padding: 80px 6% 0;
+}
+.hero-copy {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  margin: auto;
+  padding: 30px 0 85px;
+  text-align: center;
+}
+.hero-copy .eyebrow {
+  justify-content: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.status-dot {
+  display: none;
+}
+.hero-copy h1 {
+  font-size: clamp(5.2rem, 10vw, 9.8rem);
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+  margin: 34px 0 25px;
+}
+.hero-copy h1 em {
+  color: var(--ink);
+}
+.hero-detail {
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 0 auto 32px;
+}
+.hero-copy .button {
+  background: transparent;
+  color: var(--ink);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--accent);
+  gap: 35px;
+}
+.hero-copy .button:hover {
+  color: var(--accent);
+}
+.hero-bottom {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  border-color: var(--line);
+}
+.content {
+  max-width: 1190px;
+}
+.content > section {
+  padding: 76px 5.5%;
+}
+#about {
+  padding-top: 92px;
+  padding-bottom: 92px;
+}
+.section-label {
+  text-transform: none;
+  font-family: var(--serif);
+  font-size: 25px;
+  letter-spacing: -0.2px;
+}
+.section-rule {
+  width: 25px;
+  background: var(--line);
+}
+#research,
+.project-callout,
+#education {
+  background: transparent;
+  color: var(--ink);
+}
+#research .section-rule {
+  background: var(--line);
+}
+.themes li {
+  border-color: var(--line);
+  font-size: 27px;
+}
+.themes li span,
+.themes li:before {
+  color: var(--muted);
+}
+.themes li:before {
+  color: var(--accent);
+}
+.work-title {
+  font-size: 31px;
+}
+.work-desc,
+.card-desc {
+  font-size: 16px;
+}
+.entry-org {
+  font-size: 30px;
+}
+.chip {
+  border: 0;
+  padding: 0;
+}
+.inner-opening {
+  max-width: 1190px;
+  padding-top: 70px;
+  padding-bottom: 65px;
+}
+.inner-opening h1 {
+  font-size: clamp(5rem, 8vw, 7.5rem);
+}
+.inner-opening > p:last-child {
+  font-size: 28px;
+}
+.site-footer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 42px 0;
+  background: transparent;
+  color: var(--ink);
+  border-top: 1px solid var(--line);
+}
+.footer-meta {
+  color: var(--muted);
+}
+.site-footer a:hover {
+  color: var(--accent);
+}
+@media (max-width: 1000px) {
+  .opening {
+    min-height: 650px;
+    background-size: auto 100%;
+  }
+  .hero-copy {
+    max-width: 720px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(5rem, 10vw, 7rem);
+  }
+  .hero-detail {
+    max-width: 480px;
+  }
+  .site-footer {
+    margin: 0 5.5%;
+  }
+}
+@media (max-width: 700px) {
+  .site-header {
+    height: auto;
+    min-height: 105px;
+  }
+  .opening {
+    min-height: 620px;
+    padding: 70px 6% 0;
+    background-size: auto 100%;
+  }
+  .hero-copy {
+    padding: 25px 0 65px;
+  }
+  .hero-copy .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.1px;
+  }
+  .hero-copy h1 {
+    font-size: clamp(4rem, 13.5vw, 5.6rem);
+    line-height: 1.08;
+    margin: 28px 0 24px;
+  }
+  .hero-copy h1 em {
+    display: block;
+  }
+  .hero-detail {
+    max-width: 290px;
+    font-size: 15px;
+  }
+  .hero-detail br {
+    display: none;
+  }
+  .hero-bottom {
+    padding: 20px 0;
+    align-items: flex-end;
+  }
+  .hero-bottom > span {
+    max-width: 120px;
+  }
+  .content > section {
+    padding: 48px 6%;
+  }
+  #about {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .section-label {
+    font-size: 26px;
+  }
+  .themes li {
+    font-size: 25px;
+  }
+  .site-footer {
+    padding: 32px 0;
+  }
+}
+@media print {
+  .opening {
+    background: none;
+    min-height: 0;
+    padding: 0;
+  }
+  .hero-copy {
+    padding: 20px 0;
+  }
+}
+
+/* Keep the botanical details in the margins at every viewport width. */
+.opening::before,
+.opening::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 24%;
+  pointer-events: none;
+  background-image: url("assets/garden-margins.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 12%,
+    #000 85%,
+    transparent
+  );
+}
+.opening::before {
+  left: 0;
+  background-position: left center;
+}
+.opening::after {
+  right: 0;
+  background-position: right center;
+}
+@media (max-width: 700px) {
+  .opening::before,
+  .opening::after {
+    width: 18%;
+    opacity: 0.48;
+  }
+}
+@media print {
+  .opening::before,
+  .opening::after {
+    display: none;
   }
 }

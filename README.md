@@ -1,6 +1,6 @@
 # Pengcheng Xu — personal website
 
-A four-page, dependency-free portfolio inspired by the closing natural-history illustrations in Anthropic’s _Introducing Claude Fable 5_ film: warm paper, hand-colored botanical engravings, generous editorial typography, and restrained motion.
+A four-page, dependency-free portfolio inspired by the closing natural-history illustrations in Anthropic’s _Introducing Claude Fable 5_ film: warm paper, hand-colored botanical engravings, centered book-like typography, quiet floral marginalia, and restrained motion.
 
 ## Local development
 
@@ -18,6 +18,6 @@ Run `npm run build` to produce `dist/`. The source HTML pages remain directly co
 - `styles.css`: shared palette, type, layouts, responsive and print styles.
 - `site.js`: optional one-time section entrance, respecting reduced-motion settings. All content and navigation work without JavaScript.
 
-Public biographical content and repository links were retained from the original site. The natural-history hero artwork is original AI-generated imagery; it does not reproduce Anthropic’s video frames. Existing assets are retained in source history.
+Public biographical content and repository links were retained from the original site. The natural-history background artwork is original AI-generated imagery; it does not reproduce Anthropic’s video frames. Existing assets are retained in source history.
 
 Reference: https://www.youtube.com/watch?v=Y9Wz2PV404E (closing butterfly/moth illustrations, approximately 1:48).
