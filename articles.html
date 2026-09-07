@@ -6,7 +6,7 @@
     <title>Writing &mdash; Pengcheng Xu</title>
     <meta
       name="description"
-      content="Articles and long-form writing by Pengcheng Xu."
+      content="Research papers and writing by Pengcheng Xu on coding agents, language tooling, and systems."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,23 +36,54 @@
     <main id="main">
       <section class="inner-opening" aria-labelledby="page-title">
         <h1 id="page-title">Writing<em>.</em></h1>
-        <p>Thinking out loud, carefully.</p>
+        <p>Research and writing on agents, compilers, and systems.</p>
       </section>
       <div class="content">
         <section id="articles" aria-labelledby="articles-head">
           <div class="section-head">
-            <h2 class="section-label" id="articles-head">Writing</h2>
+            <h2 class="section-label" id="articles-head">Research papers</h2>
             <div class="section-rule" role="presentation"></div>
           </div>
           <ul class="articles">
             <li>
-              <p class="article-title">Notes from the bench.</p>
+              <span class="article-meta">2026 &middot; arXiv preprint</span>
+              <h3 class="article-title">
+                <a
+                  href="https://arxiv.org/abs/2608.13568"
+                  target="_blank"
+                  rel="noopener"
+                  >Does a Language Server Save Tokens for Coding Agents? A
+                  Measurement Methodology and Preliminary Study</a
+                >
+              </h3>
+              <p class="paper-author">Pengcheng Xu</p>
               <p class="article-dek">
-                Long-form notes from the bench: agent orchestration,
-                inference-cost engineering, and the compiler ideas that keep
-                finding their way into both.
+                Does semantic code retrieval actually reduce an agent’s token
+                budget? This preliminary study compares LSP with lexical search
+                using tokens-to-success at equal task success. The findings
+                suggest that LSP does not consistently save tokens: its value
+                depends on the task, model capability, and lexical noise.
               </p>
-              <span class="article-meta">In progress · 2026</span>
+              <p class="inline-links paper-links">
+                <a
+                  href="https://arxiv.org/abs/2608.13568"
+                  target="_blank"
+                  rel="noopener"
+                  >Read on arXiv ↗</a
+                >
+                <a
+                  href="https://arxiv.org/pdf/2608.13568"
+                  target="_blank"
+                  rel="noopener"
+                  >PDF ↗</a
+                >
+                <a
+                  href="https://github.com/agentconnect-md/lsp-vs-grep-token-study"
+                  target="_blank"
+                  rel="noopener"
+                  >Code &amp; data ↗</a
+                >
+              </p>
             </li>
           </ul>
         </section>

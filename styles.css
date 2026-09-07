@@ -1164,3 +1164,21 @@ img {
     linear-gradient(to bottom, transparent, #000 12%, #000 85%, transparent);
   mask-composite: intersect;
 }
+
+/* Bibliographic details stay distinct from the paper title and summary. */
+.articles .article-meta {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.articles .article-title {
+  line-height: 1.18;
+}
+.paper-author {
+  margin-top: 18px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.paper-links a {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 3px;
+}
