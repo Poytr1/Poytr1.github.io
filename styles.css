@@ -1151,3 +1151,16 @@ img {
     display: none;
   }
 }
+
+.opening::before {
+  mask-image:
+    linear-gradient(to right, #000 40%, transparent),
+    linear-gradient(to bottom, transparent, #000 12%, #000 85%, transparent);
+  mask-composite: intersect;
+}
+.opening::after {
+  mask-image:
+    linear-gradient(to left, #000 40%, transparent),
+    linear-gradient(to bottom, transparent, #000 12%, #000 85%, transparent);
+  mask-composite: intersect;
+}
