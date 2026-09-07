@@ -25,3 +25,5 @@ Reference: https://www.youtube.com/watch?v=Y9Wz2PV404E (closing butterfly/moth i
 Biography updated from the owner’s September 2026 corrections: Speak, Engineering, since July 2026. AgentConnect summary based on https://github.com/agentconnect-md/agentconnect/blob/main/README.md. Microsoft end year is recorded without inventing an exact departure month.
 
 Research entry: arXiv:2608.13568, listed as a 2026 preprint with its author, full title, PDF, and linked code/data repository.
+
+AgentConnect wordmark sourced from the project’s official `docs/assets/logo-wordmark.svg`; retained unmodified with its built-in reduced-motion support.
