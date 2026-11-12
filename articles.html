@@ -2,127 +2,102 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Writing &mdash; Pengcheng Xu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Writing — Pengcheng Xu</title>
     <meta
       name="description"
-      content="Research papers and writing by Pengcheng Xu on coding agents, language tooling, and systems."
+      content="Research and writing by Pengcheng Xu on agents, compilers, and systems."
     />
+    <meta name="theme-color" content="#f4efe3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=Libre+Caslon+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500&family=Libre+Caslon+Display&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <meta name="theme-color" content="#283b30" />
-    <script src="site.js" defer></script>
   </head>
-  <body class="inner-page">
-    <a class="skip-link" href="#main">Skip to content</a>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
     <header class="site-header" id="top">
-      <a class="wordmark" href="index.html" aria-label="Pengcheng Xu, home"
-        >PX<span class="wordmark-dot">.</span></a
-      >
-      <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a><a href="projects.html">Projects</a
-        ><a href="news.html">News</a
-        ><a href="articles.html" aria-current="page">Writing</a>
-      </nav>
-      <a class="header-contact" href="mailto:pooytr1@gmail.com"
-        >Let’s talk <span aria-hidden="true">↗</span></a
-      >
+      <div class="wrap">
+        <a class="mark" href="index.html" aria-label="Pengcheng Xu, home"
+          >PX<span>.</span></a
+        >
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="articles.html" aria-current="page">Writing</a>
+        </nav>
+        <a class="contact" href="mailto:pooytr1@gmail.com"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </div>
     </header>
-    <main id="main">
-      <section class="inner-opening" aria-labelledby="page-title">
-        <h1 id="page-title">Writing<em>.</em></h1>
+
+    <main id="main" class="wrap">
+      <header class="page-head">
+        <h1>Writing<em>.</em></h1>
         <p>Research and writing on agents, compilers, and systems.</p>
-      </section>
-      <div class="content">
-        <section id="articles" aria-labelledby="articles-head">
-          <div class="section-head">
-            <h2 class="section-label" id="articles-head">
-              Articles &amp; research
-            </h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
-          <ul class="articles">
-            <li>
-              <span class="article-meta"
-                >2026 &middot; Article &amp; arXiv preprint</span
-              >
-              <h3 class="article-title">
-                <a
-                  href="https://arxiv.org/abs/2608.13568"
-                  target="_blank"
-                  rel="noopener"
+      </header>
+
+      <section class="section" aria-label="Articles and research">
+        <ul class="rows">
+          <li>
+            <span class="meta">2026 · Article &amp; arXiv preprint</span>
+            <div>
+              <h3>
+                <a href="https://arxiv.org/abs/2608.13568"
                   >Does a Language Server Save Tokens for Coding Agents? A
                   Measurement Methodology and Preliminary Study</a
                 >
               </h3>
-              <p class="paper-author">Pengcheng Xu</p>
-              <p class="article-dek">
+              <p class="role">Pengcheng Xu</p>
+              <p>
                 Does semantic code retrieval actually reduce an agent’s token
                 budget? This preliminary study compares LSP with lexical search
                 using tokens-to-success at equal task success. The findings
                 suggest that LSP does not consistently save tokens: its value
                 depends on the task, model capability, and lexical noise.
               </p>
-              <p class="article-dek">
+              <p>
                 The same study is discussed on the AgentConnect blog in
                 <a
                   href="https://www.agentconnect.md/blog/grep-beat-lsp-harness/"
-                  target="_blank"
-                  rel="noopener"
                   ><em
                     >Grep beats LSP? Why coding agents ignore your fancier
                     tools</em
                   ></a
                 >.
               </p>
-              <p class="inline-links paper-links">
+              <p class="links">
                 <a
                   href="https://www.agentconnect.md/blog/grep-beat-lsp-harness/"
-                  target="_blank"
-                  rel="noopener"
                   >Read the article ↗</a
                 >
-                <a
-                  href="https://arxiv.org/abs/2608.13568"
-                  target="_blank"
-                  rel="noopener"
-                  >Read on arXiv ↗</a
-                >
-                <a
-                  href="https://arxiv.org/pdf/2608.13568"
-                  target="_blank"
-                  rel="noopener"
-                  >PDF ↗</a
-                >
+                <a href="https://arxiv.org/abs/2608.13568">Read on arXiv ↗</a>
+                <a href="https://arxiv.org/pdf/2608.13568">PDF ↗</a>
                 <a
                   href="https://github.com/agentconnect-md/lsp-vs-grep-token-study"
-                  target="_blank"
-                  rel="noopener"
                   >Code &amp; data ↗</a
                 >
               </p>
-            </li>
-          </ul>
-        </section>
-      </div>
+            </div>
+            <span class="tag">research</span>
+          </li>
+        </ul>
+      </section>
     </main>
+
     <footer class="site-footer">
-      <a class="wordmark" href="index.html"
-        >Pengcheng Xu<span class="wordmark-dot">.</span></a
-      >
-      <div class="footer-meta">
-        Engineer &amp; researcher<br />Shanghai, China
-      </div>
-      <div class="footer-links">
-        <a href="mailto:pooytr1@gmail.com">Email ↗</a
-        ><a href="https://github.com/Poytr1" target="_blank" rel="noopener"
-          >GitHub ↗</a
-        ><a href="#top">Back to top ↑</a>
+      <div class="wrap">
+        <span>Pengcheng Xu · Engineer &amp; researcher · Shanghai, China</span>
+        <nav aria-label="Footer">
+          <a href="mailto:pooytr1@gmail.com">Email</a>
+          <a href="https://github.com/Poytr1">GitHub</a>
+          <a href="#top">Back to top ↑</a>
+        </nav>
       </div>
     </footer>
   </body>

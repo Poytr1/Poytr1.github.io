@@ -2,287 +2,181 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects &mdash; Pengcheng Xu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Pengcheng Xu</title>
     <meta
       name="description"
-      content="Open-source projects and research by Pengcheng Xu."
+      content="Open-source projects by Pengcheng Xu: AgentConnect, Sentio Composer, Sentio AI Kit, Changelogue, and AgentJIT."
     />
+    <meta name="theme-color" content="#f4efe3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=Libre+Caslon+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500&family=Libre+Caslon+Display&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <meta name="theme-color" content="#283b30" />
-    <script src="site.js" defer></script>
   </head>
-  <body class="inner-page">
-    <a class="skip-link" href="#main">Skip to content</a>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
     <header class="site-header" id="top">
-      <a class="wordmark" href="index.html" aria-label="Pengcheng Xu, home"
-        >PX<span class="wordmark-dot">.</span></a
-      >
-      <nav class="site-nav" aria-label="Primary">
-        <a href="index.html">Home</a
-        ><a href="projects.html" aria-current="page">Projects</a
-        ><a href="news.html">News</a><a href="articles.html">Writing</a>
-      </nav>
-      <a class="header-contact" href="mailto:pooytr1@gmail.com"
-        >Let’s talk <span aria-hidden="true">↗</span></a
-      >
+      <div class="wrap">
+        <a class="mark" href="index.html" aria-label="Pengcheng Xu, home"
+          >PX<span>.</span></a
+        >
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="articles.html">Writing</a>
+        </nav>
+        <a class="contact" href="mailto:pooytr1@gmail.com"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </div>
     </header>
-    <main id="main">
-      <section class="inner-opening" aria-labelledby="page-title">
-        <h1 id="page-title">Projects<em>.</em></h1>
+
+    <main id="main" class="wrap">
+      <header class="page-head">
+        <h1>Projects<em>.</em></h1>
         <p>Tools for turning ideas into working systems.</p>
+      </header>
+
+      <section class="section" aria-labelledby="current-label">
+        <h2 class="label" id="current-label">Currently building</h2>
+        <article class="feature">
+          <a
+            class="plate"
+            href="https://github.com/agentconnect-md/agentconnect"
+            ><img
+              src="assets/agentconnect.svg"
+              alt="AgentConnect"
+              width="398"
+              height="76"
+          /></a>
+          <div>
+            <p class="muted" style="margin-top: 0">
+              An open-source platform where teams and multiple AI agents work
+              together across Slack, GitHub, Discord, Telegram, and other tools.
+              Agents collaborate in shared conversations, carry context forward,
+              and run in self-hosted environments.
+            </p>
+            <p class="links">
+              <a href="https://github.com/agentconnect-md/agentconnect"
+                >View repository ↗</a
+              >
+              <a href="https://agentconnect.md">Visit website ↗</a>
+            </p>
+          </div>
+        </article>
       </section>
-      <div class="content">
-        <section id="projects" aria-labelledby="projects-head">
-          <div class="section-head">
-            <h2 class="section-label" id="projects-head">Projects</h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
 
-          <div class="cards">
-            <article class="card card-featured">
-              <p class="featured-label">Currently building</p>
-              <h3 class="card-name">
-                <a
-                  href="https://github.com/agentconnect-md/agentconnect"
-                  target="_blank"
-                  rel="noopener"
-                  ><img
-                    class="project-wordmark"
-                    src="assets/agentconnect.svg"
-                    alt="AgentConnect"
-                    width="398"
-                    height="76"
-                /></a>
-              </h3>
-              <p class="card-desc">
-                An open-source platform where teams and multiple AI agents work
-                together across Slack, GitHub, Discord, Telegram, and other
-                tools. Agents collaborate in shared conversations, carry context
-                forward, and run in self-hosted environments.
-              </p>
-              <p class="card-tags">
-                Current project &middot; Multi-agent collaboration &middot; AI
-                infrastructure
-              </p>
-              <p class="card-link">
-                <a
-                  href="https://github.com/agentconnect-md/agentconnect"
-                  target="_blank"
-                  rel="noopener"
-                  >View repository ↗</a
-                >
-                <a href="https://agentconnect.md" target="_blank" rel="noopener"
-                  >Visit website ↗</a
-                >
-              </p>
-            </article>
-            <!-- 1. Sentio Composer -->
-            <article class="card">
-              <div class="card-art">
-                <img
-                  src="assets/sentio-composer.svg"
-                  alt="Sentio Composer"
-                  width="72"
-                  height="72"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="card-name">
-                <a
-                  href="https://github.com/sentioxyz/sentio-composer"
-                  target="_blank"
-                  rel="noopener"
-                  >Sentio Composer</a
-                >
-              </h3>
-              <div class="card-rule" role="presentation"></div>
-              <p class="card-desc">
-                A localized Aptos view-function simulator and CLI that executes
-                Move view functions across mainnet, testnet, and devnet without
-                requiring explicit entry-function declarations — giving
-                blockchain developers fast local read-simulation of on-chain
-                state.
-              </p>
-              <p class="card-tags">
-                Rust &middot; TypeScript &middot; Aptos / Move &middot;
-                developer tooling
-              </p>
-              <p class="card-link">
-                <a
-                  href="https://github.com/sentioxyz/sentio-composer"
-                  target="_blank"
-                  rel="noopener"
-                  >View repository ↗</a
-                >
-              </p>
-            </article>
+      <section class="section" aria-labelledby="oss-label">
+        <h2 class="label" id="oss-label">Open source</h2>
+        <div class="cards" style="margin-top: 0">
+          <article class="card">
+            <img
+              src="assets/sentio-composer.svg"
+              alt=""
+              width="52"
+              height="52"
+              loading="lazy"
+            />
+            <h3>
+              <a href="https://github.com/sentioxyz/sentio-composer"
+                >Sentio Composer ↗</a
+              >
+            </h3>
+            <p>
+              A localized Aptos view-function simulator and CLI that executes
+              Move view functions across mainnet, testnet, and devnet without
+              requiring explicit entry-function declarations — giving blockchain
+              developers fast local read-simulation of on-chain state.
+            </p>
+            <p class="tag">Rust · TypeScript · Aptos / Move</p>
+          </article>
 
-            <!-- 2. Sentio AI Kit -->
-            <article class="card">
-              <div class="card-art">
-                <img
-                  src="assets/sentio-ai-kit.svg"
-                  alt="Sentio AI Kit"
-                  width="72"
-                  height="72"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="card-name">
-                <a
-                  href="https://github.com/sentioxyz/sentio-ai-kit"
-                  target="_blank"
-                  rel="noopener"
-                  >Sentio AI Kit</a
-                >
-              </h3>
-              <div class="card-rule" role="presentation"></div>
-              <p class="card-desc">
-                An open-source library of out-of-the-box, composable agent
-                &ldquo;skills&rdquo; targeting agent harnesses like Claude Code
-                and OpenClaw. Harness users drop in ready-made capabilities
-                instead of authoring them from scratch.
-              </p>
-              <p class="card-tags">
-                LLM agents &middot; agent skills &middot; tooling
-              </p>
-              <p class="card-link">
-                <a
-                  href="https://github.com/sentioxyz/sentio-ai-kit"
-                  target="_blank"
-                  rel="noopener"
-                  >View repository ↗</a
-                >
-              </p>
-            </article>
+          <article class="card">
+            <img
+              src="assets/sentio-ai-kit.svg"
+              alt=""
+              width="52"
+              height="52"
+              loading="lazy"
+            />
+            <h3>
+              <a href="https://github.com/sentioxyz/sentio-ai-kit"
+                >Sentio AI Kit ↗</a
+              >
+            </h3>
+            <p>
+              An open-source library of out-of-the-box, composable agent
+              “skills” targeting agent harnesses like Claude Code and OpenClaw.
+              Harness users drop in ready-made capabilities instead of authoring
+              them from scratch.
+            </p>
+            <p class="tag">LLM agents · agent skills</p>
+          </article>
 
-            <!-- 3. Changelogue -->
-            <article class="card">
-              <div class="card-art">
-                <img
-                  src="assets/changelogue.svg"
-                  alt="Changelogue"
-                  width="72"
-                  height="72"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="card-name">
-                <a
-                  href="https://github.com/sentioxyz/changelogue"
-                  target="_blank"
-                  rel="noopener"
-                  >Changelogue</a
-                >
-              </h3>
-              <div class="card-rule" role="presentation"></div>
-              <p class="card-desc">
-                An agent-driven release-intelligence framework that tracks
-                repository deltas and synthesizes contextually relevant,
-                human-readable release notes automatically — bridging raw git
-                history and meaningful changelogs without manual curation.
-              </p>
-              <p class="card-tags">
-                Go &middot; React &middot; LLM agents &middot; git delta
-                analysis
-              </p>
-              <p class="card-link">
-                <a
-                  href="https://github.com/sentioxyz/changelogue"
-                  target="_blank"
-                  rel="noopener"
-                  >View repository ↗</a
-                >
-              </p>
-            </article>
+          <article class="card">
+            <img
+              src="assets/changelogue.svg"
+              alt=""
+              width="52"
+              height="52"
+              loading="lazy"
+            />
+            <h3>
+              <a href="https://github.com/agentconnect-md/changelogue"
+                >Changelogue ↗</a
+              >
+            </h3>
+            <p>
+              An agent-driven release-intelligence framework that tracks
+              repository deltas and synthesizes contextually relevant,
+              human-readable release notes automatically — bridging raw git
+              history and meaningful changelogs without manual curation.
+            </p>
+            <p class="tag">Go · React · git delta analysis</p>
+          </article>
 
-            <!-- 4. AgentJIT -->
-            <article class="card">
-              <div class="card-art">
-                <img
-                  src="assets/agentjit.svg"
-                  alt="AgentJIT"
-                  width="72"
-                  height="72"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="card-name">
-                <a
-                  href="https://github.com/agent-jit/AgentJIT"
-                  target="_blank"
-                  rel="noopener"
-                  >AgentJIT</a
-                >
-              </h3>
-              <div class="card-rule" role="presentation"></div>
-              <p class="card-desc">
-                A background JIT compiler daemon for autonomous LLM agents. It
-                analyzes agent execution traces and compiles stochastic,
-                multi-step reasoning paths into deterministic, zero-token shell
-                scripts &mdash; drastically cutting both latency and per-call
-                API cost.
-              </p>
-              <p class="card-tags">
-                LLM agents &middot; JIT compilation &middot; inference-cost
-                optimization
-              </p>
-              <p class="card-link">
-                <a
-                  href="https://github.com/agent-jit/AgentJIT"
-                  target="_blank"
-                  rel="noopener"
-                  >View repository ↗</a
-                >
-              </p>
-            </article>
-          </div>
-
-          <p class="inline-links">
-            <span class="lbl">Upstream contributions</span>
-            <a
-              href="https://github.com/microsoft/Trill"
-              target="_blank"
-              rel="noopener"
-              >microsoft/Trill</a
-            >
-            <span class="sep" aria-hidden="true">&#9670;</span>
-            <a
-              href="https://github.com/tikv/tikv"
-              target="_blank"
-              rel="noopener"
-              >tikv/tikv</a
-            >
-            <span class="sep" aria-hidden="true">&#9670;</span>
-            <a
-              href="https://github.com/elastic/kibana"
-              target="_blank"
-              rel="noopener"
-              >elastic/kibana</a
-            >
-          </p>
-        </section>
-      </div>
+          <article class="card">
+            <img
+              src="assets/agentjit.svg"
+              alt=""
+              width="52"
+              height="52"
+              loading="lazy"
+            />
+            <h3>
+              <a href="https://github.com/agent-jit/AgentJIT">AgentJIT ↗</a>
+            </h3>
+            <p>
+              A background JIT compiler daemon for autonomous LLM agents. It
+              analyzes agent execution traces and compiles stochastic,
+              multi-step reasoning paths into deterministic, zero-token shell
+              scripts — drastically cutting both latency and per-call API cost.
+            </p>
+            <p class="tag">JIT compilation · inference cost</p>
+          </article>
+        </div>
+        <p class="links" style="margin-top: 28px">
+          <span class="label">Upstream contributions</span>
+          <a href="https://github.com/microsoft/Trill">microsoft/Trill</a>
+          <a href="https://github.com/tikv/tikv">tikv/tikv</a>
+          <a href="https://github.com/elastic/kibana">elastic/kibana</a>
+        </p>
+      </section>
     </main>
+
     <footer class="site-footer">
-      <a class="wordmark" href="index.html"
-        >Pengcheng Xu<span class="wordmark-dot">.</span></a
-      >
-      <div class="footer-meta">
-        Engineer &amp; researcher<br />Shanghai, China
-      </div>
-      <div class="footer-links">
-        <a href="mailto:pooytr1@gmail.com">Email ↗</a
-        ><a href="https://github.com/Poytr1" target="_blank" rel="noopener"
-          >GitHub ↗</a
-        ><a href="#top">Back to top ↑</a>
+      <div class="wrap">
+        <span>Pengcheng Xu · Engineer &amp; researcher · Shanghai, China</span>
+        <nav aria-label="Footer">
+          <a href="mailto:pooytr1@gmail.com">Email</a>
+          <a href="https://github.com/Poytr1">GitHub</a>
+          <a href="#top">Back to top ↑</a>
+        </nav>
       </div>
     </footer>
   </body>

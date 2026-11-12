@@ -2,412 +2,448 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pengcheng Xu &mdash; Engineer &amp; Researcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pengcheng Xu — Engineer &amp; Researcher</title>
     <meta
       name="description"
-      content="Pengcheng Xu — systems engineer and independent researcher working at the intersection of compilers, runtimes, and LLM-agent systems."
+      content="Pengcheng Xu — engineer at Speak and independent researcher, working on compilers, runtimes, and LLM-agent systems. Currently building AgentConnect."
     />
+    <meta name="theme-color" content="#f4efe3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=Libre+Caslon+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500&family=Libre+Caslon+Display&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <meta name="theme-color" content="#283b30" />
     <script src="site.js" defer></script>
   </head>
-  <body class="home">
-    <a class="skip-link" href="#main">Skip to content</a>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
     <header class="site-header" id="top">
-      <a class="wordmark" href="index.html" aria-label="Pengcheng Xu, home"
-        >PX<span class="wordmark-dot">.</span></a
-      >
-      <nav class="site-nav" aria-label="Primary">
-        <a href="index.html" aria-current="page">Home</a
-        ><a href="projects.html">Projects</a><a href="news.html">News</a
-        ><a href="articles.html">Writing</a>
-      </nav>
-      <a class="header-contact" href="mailto:pooytr1@gmail.com"
-        >Let’s talk <span aria-hidden="true">↗</span></a
-      >
+      <div class="wrap">
+        <a class="mark" href="index.html" aria-label="Pengcheng Xu, home"
+          >PX<span>.</span></a
+        >
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="articles.html">Writing</a>
+        </nav>
+        <a class="contact" href="mailto:pooytr1@gmail.com"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </div>
     </header>
-    <main id="main">
-      <section class="opening" aria-labelledby="name">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span> Engineer &amp;
-            independent researcher
-          </p>
+
+    <main id="main" class="wrap">
+      <!-- 1. Who, what, now -->
+      <section class="hero" aria-labelledby="name">
+        <div>
+          <p class="label">Engineer &amp; independent researcher</p>
           <h1 id="name">Pengcheng <em>Xu.</em></h1>
-          <p class="hero-detail">
-            Engineering at Speak.<br />Currently building
-            <a
-              href="https://github.com/agentconnect-md/agentconnect"
-              target="_blank"
-              rel="noopener"
-              >AgentConnect ↗</a
-            >.
+          <p class="lede">
+            At <a href="https://www.speak.com/">Speak</a> I work on
+            infrastructure and agentic products for language learners. I’m also
+            building
+            <a href="https://github.com/agentconnect-md/agentconnect"
+              >AgentConnect</a
+            >, an open-source platform for teams and AI agents.
           </p>
-          <a class="button" href="projects.html"
-            >Selected projects <span aria-hidden="true">↗</span></a
+          <a class="cta" href="#work"
+            >Selected work <span aria-hidden="true">↓</span></a
           >
         </div>
-        <div class="hero-bottom">
-          <span>Based in Shanghai, China</span
-          ><a href="#about"
-            >A little about me <span aria-hidden="true">↓</span></a
-          ><span>Compilers · Runtimes · Agents</span>
+
+        <figure class="map">
+          <svg
+            id="map"
+            viewBox="0 0 640 392"
+            role="group"
+            aria-label="A hand-drawn map of the areas I work on. Intent and code reach agents, agents produce an intermediate representation that is compiled to code and run on a runtime fed by events, and the results reach people."
+          >
+            <defs>
+              <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+                <feTurbulence
+                  type="fractalNoise"
+                  baseFrequency="0.035"
+                  numOctaves="2"
+                  seed="7"
+                  result="noise"
+                />
+                <feDisplacementMap
+                  in="SourceGraphic"
+                  in2="noise"
+                  scale="4.5"
+                />
+              </filter>
+              <marker
+                id="arrow"
+                viewBox="0 0 10 10"
+                refX="8.5"
+                refY="5"
+                markerWidth="7"
+                markerHeight="7"
+                orient="auto-start-reverse"
+              >
+                <path
+                  d="M1 1.5 L9 5 L1 8.5"
+                  fill="none"
+                  stroke="context-stroke"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </marker>
+            </defs>
+            <text class="caption" x="236" y="26">
+              an almost-accurate map of what I work on
+            </text>
+            <path
+              class="caption-arrow"
+              d="M230 30 C 212 36, 200 46, 194 60"
+              marker-end="url(#arrow)"
+              filter="url(#rough)"
+            />
+            <g filter="url(#rough)">
+              <path class="edge" data-from="intent" data-to="agents" d="M142 100 Q170 110 198 100" marker-end="url(#arrow)" />
+              <path class="edge" data-from="code" data-to="lsp" d="M138 232 Q161 242 184 232" marker-end="url(#arrow)" />
+              <path class="edge" data-from="lsp" data-to="agents" d="M241.7 203 Q260.8 168.3 256.3 129" marker-end="url(#arrow)" />
+              <path class="edge" data-from="agents" data-to="ir" d="M306.5 129 Q323.4 156.7 355.5 161" marker-end="url(#arrow)" />
+              <path class="edge" data-from="ir" data-to="codegen" d="M400 219 Q388 245 400 271" marker-end="url(#arrow)" />
+              <path class="edge" data-from="codegen" data-to="runtime" d="M466 300 Q478 310 490 300" marker-end="url(#arrow)" />
+              <path class="edge" data-from="events" data-to="runtime" d="M142 341.9 Q321.8 382 490 306.7" marker-end="url(#arrow)" />
+              <path class="edge" data-from="runtime" data-to="people" d="M557.6 271 Q575 210.8 564.4 149" marker-end="url(#arrow)" />
+              <path class="edge" data-from="agents" data-to="people" d="M326 104.2 Q418.4 88.2 508 116.2" marker-end="url(#arrow)" />
+            </g>
+            <g id="map-pulses"></g>
+            <g>
+              <a class="node" href="#nl-pipeline" data-id="intent" data-note="Plain language in, a deployable streaming pipeline out — hackathon agent, 2nd place, Oct 2024" aria-label="intent: Plain language in, a deployable streaming pipeline out — hackathon agent, 2nd place, Oct 2024">
+                <rect x="28" y="77" width="108" height="46" rx="12" filter="url(#rough)" />
+                <text x="82" y="101">intent</text>
+              </a>
+              <a class="node" href="#elastic" data-id="code" data-note="The codebases an agent has to find its way around — code search at Elastic" aria-label="code: The codebases an agent has to find its way around — code search at Elastic">
+                <rect x="32" y="209" width="100" height="46" rx="12" filter="url(#rough)" />
+                <text x="82" y="233">code</text>
+              </a>
+              <a class="node" href="#eventstreams" data-id="events" data-note="Real-time streams — Fabric Eventstreams, documented at up to 200 MB/s per stream" aria-label="events: Real-time streams — Fabric Eventstreams, documented at up to 200 MB/s per stream">
+                <rect x="28" y="325" width="108" height="46" rx="12" filter="url(#rough)" />
+                <text x="82" y="349">events</text>
+              </a>
+              <a class="node" href="#finding" data-id="lsp" data-note="Does a language server save tokens for coding agents? Usually not — arXiv, 2026" aria-label="LSP: Does a language server save tokens for coding agents? Usually not — arXiv, 2026">
+                <rect x="190" y="209" width="92" height="46" rx="12" filter="url(#rough)" />
+                <text x="236" y="233">LSP</text>
+              </a>
+              <a class="node" href="#agentconnect" data-id="agents" data-note="AgentConnect — teams and multiple AI agents in one shared conversation" aria-label="agents: AgentConnect — teams and multiple AI agents in one shared conversation">
+                <rect x="204" y="77" width="116" height="46" rx="12" filter="url(#rough)" />
+                <text x="262" y="101">agents</text>
+              </a>
+              <a class="node" href="#eventstreams" data-id="ir" data-note="Eventstreams V3 — one compilation pipeline and one IR/DAG framework" aria-label="IR / DAG: Eventstreams V3 — one compilation pipeline and one IR/DAG framework">
+                <rect x="342" y="167" width="116" height="46" rx="12" filter="url(#rough)" />
+                <text x="400" y="191">IR / DAG</text>
+              </a>
+              <a class="node" href="#sentio" data-id="codegen" data-note="Sentio — an agent that generates processor code for EVM, Sui, Aptos and Move" aria-label="codegen: Sentio — an agent that generates processor code for EVM, Sui, Aptos and Move">
+                <rect x="340" y="277" width="120" height="46" rx="12" filter="url(#rough)" />
+                <text x="400" y="301">codegen</text>
+              </a>
+              <a class="node" href="#questions" data-id="runtime" data-note="An open question — sandboxing and multi-tenant isolation for untrusted workloads" aria-label="runtime: An open question — sandboxing and multi-tenant isolation for untrusted workloads">
+                <rect x="496" y="277" width="120" height="46" rx="12" filter="url(#rough)" />
+                <text x="556" y="301">runtime</text>
+              </a>
+              <a class="node" href="#speak" data-id="people" data-note="Who it is for — at Speak, people learning a language" aria-label="people: Who it is for — at Speak, people learning a language">
+                <rect x="514" y="97" width="104" height="46" rx="12" filter="url(#rough)" />
+                <text x="566" y="121">people</text>
+              </a>
+            </g>
+          </svg>
+          <figcaption id="map-note" aria-live="polite">
+            <span class="hint">hover a node · click to jump to the work</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <div class="strip">
+        <span><b>Now</b> Engineering at Speak, since Jul 2026</span>
+        <span>Shanghai, China</span>
+        <span>Compilers · Runtimes · Agents</span>
+      </div>
+
+      <!-- 2. The short version -->
+      <section class="section" id="about" aria-labelledby="about-label">
+        <h2 class="label" id="about-label">About</h2>
+        <p class="bio">
+          I work where <mark>systems engineering</mark> meets independent
+          research. Since July 2026 I’ve been an engineer at
+          <a class="chip" href="https://www.speak.com/"
+            ><b style="--c: #2f6fdb">S</b>Speak ↗</a
+          >, the AI language-learning app, working mainly on infrastructure and
+          agentic consumer products for learners. I’m also building
+          <a
+            class="chip"
+            href="https://github.com/agentconnect-md/agentconnect"
+            ><b style="--c: #c62a78">A</b>AgentConnect ↗</a
+          >, an open-source platform where teams and multiple AI agents work
+          together in shared conversations.
+        </p>
+        <p class="bio">
+          Before that I was at
+          <span class="chip"><b style="--c: #4f7a3a">M</b>Microsoft</span>
+          from 2020 to 2026, most recently as acting Tech Lead on Fabric
+          Eventstreams, where we moved the real-time streaming engine onto a
+          unified compilation pipeline. Earlier, at
+          <span class="chip"><b style="--c: #c9892b">E</b>Elastic</span>, I
+          built code intelligence on language servers. I studied computer
+          science at
+          <span class="chip"><b style="--c: #7a4a8c">U</b>USTC</span>.
+        </p>
+      </section>
+
+      <!-- 3. One result, with numbers -->
+      <section class="section" id="finding" aria-labelledby="finding-label">
+        <h2 class="label" id="finding-label">A finding · arXiv, 2026</h2>
+        <div class="finding">
+          <div>
+            <p class="finding-head">
+              Does a language server save tokens for coding agents?
+              <em>Usually not.</em>
+            </p>
+            <p class="finding-body">
+              Everyone says semantic retrieval is cheaper than grep; almost
+              nobody measures it at equal task success. I defined one metric,
+              tokens-to-success, ran a five-arm ablation on Python and
+              TypeScript repositories across three Claude models, and the
+              answer came out conditional and usually negative. The practical
+              implication is not “always use LSP” but an adaptive router keyed
+              on task class, model capability, and lexical noise.
+            </p>
+            <p class="links">
+              <a href="https://www.agentconnect.md/blog/grep-beat-lsp-harness/"
+                >Article ↗</a
+              >
+              <a href="https://arxiv.org/abs/2608.13568">arXiv:2608.13568 ↗</a>
+              <a href="https://arxiv.org/pdf/2608.13568">PDF ↗</a>
+              <a
+                href="https://github.com/agentconnect-md/lsp-vs-grep-token-study"
+                >Code &amp; data ↗</a
+              >
+            </p>
+          </div>
+          <dl class="stats">
+            <div>
+              <dt>+6% to +118%</dt>
+              <dd>token cost added by the LSP on symbol-named localization</dd>
+            </div>
+            <div>
+              <dt>0–6%</dt>
+              <dd>
+                how often models chose semantic tools over grep when localizing
+              </dd>
+            </div>
+            <div>
+              <dt>3 in 4</dt>
+              <dd>
+                multi-file renames a location-only LSP failed; grep solved them
+                all
+              </dd>
+            </div>
+          </dl>
         </div>
       </section>
-      <div class="content">
-        <section id="about" aria-labelledby="about-head">
-          <div class="section-head">
-            <h2 class="section-label" id="about-head">About</h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
-          <p class="summary">
-            I work where <em>systems engineering</em
-            ><br class="desktop-break" />
-            meets independent research.
-          </p>
-          <p class="summary">
-            I work in engineering at Speak and am currently building
-            AgentConnect, an open-source platform for teams and AI agents to
-            work together. My background spans compilers, distributed runtimes,
-            streaming, and developer tooling — with a focus on reliable
-            infrastructure around increasingly capable models.
-          </p>
-          <p class="credibility">
-            Engineering at <strong>Speak</strong> since July 2026. Previously
-            <strong>Microsoft</strong> and <strong>Elastic</strong>.
-          </p>
-        </section>
-        <section id="research" aria-labelledby="research-head">
-          <div class="section-head">
-            <h2 class="section-label" id="research-head">
-              Current explorations
-            </h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
-          <ul class="themes">
-            <li>
-              LLM agent systems &amp; orchestration
-              <span>Agentic workflows, tool-use, supervisor graphs</span>
-            </li>
-            <li>
-              Inference-cost &amp; latency optimization
-              <span>Making autonomous agents cheaper and faster to run</span>
-            </li>
-            <li>
-              Compilers, IR/DAG &amp; code generation
-              <span>For streaming and data systems</span>
-            </li>
-            <li>
-              Runtime sandboxing &amp; secure execution
-              <span>Multi-tenant isolation for untrusted workloads</span>
-            </li>
-            <li>
-              Developer tooling &amp; program intelligence
-              <span
-                >Release intelligence, code navigation, build &amp; delta
-                analysis</span
-              >
-            </li>
-          </ul>
-        </section>
 
-        <section
-          class="project-callout"
-          id="projects-teaser"
-          aria-labelledby="pt-head"
-        >
-          <div class="section-head">
-            <h2 class="section-label" id="pt-head">Projects</h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
-          <p class="summary">
-            Open-source tools and research spanning LLM-agent systems, developer
-            tooling, and compilers.
-          </p>
-          <p class="inline-links">
-            <a href="projects.html"
-              >Explore the projects <span aria-hidden="true">↗</span></a
-            >
-          </p>
-        </section>
+      <!-- 4. What I am chasing -->
+      <section class="section" id="questions" aria-labelledby="questions-label">
+        <h2 class="label" id="questions-label">Questions I’m chasing</h2>
+        <ul class="questions">
+          <li>
+            <span class="meta">Agent systems &amp; orchestration</span>
+            How should a team and many agents share one conversation?
+            <a href="#agentconnect">AgentConnect</a>
+          </li>
+          <li>
+            <span class="meta">Inference cost &amp; latency</span>
+            Can an agent’s execution traces be compiled into zero-token
+            scripts?
+            <a href="#agentjit">AgentJIT</a>
+          </li>
+          <li>
+            <span class="meta">Program intelligence</span>
+            When does semantic code intelligence actually pay for itself?
+            <a href="#finding">The LSP study</a>
+          </li>
+          <li>
+            <span class="meta">Compilers, IR/DAG &amp; codegen</span>
+            What is the right intermediate representation for a streaming
+            pipeline?
+            <a href="#eventstreams">Eventstreams V3</a>
+          </li>
+          <li>
+            <span class="meta">Developer tooling</span>
+            Can release notes be derived from repository deltas instead of
+            written by hand?
+            <a href="#changelogue">Changelogue</a>
+          </li>
+          <li>
+            <span class="meta">Runtime sandboxing</span>
+            How do you isolate untrusted, multi-tenant workloads without paying
+            for it in latency?
+          </li>
+        </ul>
+      </section>
 
-        <section id="selected-work" aria-labelledby="selected-head">
-          <div class="section-head">
-            <h2 class="section-label" id="selected-head">
-              Selected work &amp; research
-            </h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
-
-          <div class="work-list">
-            <article class="work-item">
-              <h3 class="work-title">
-                <span
-                  ><a
-                    href="https://github.com/agentconnect-md/agentconnect"
-                    target="_blank"
-                    rel="noopener"
-                    >AgentConnect ↗</a
-                  ></span
-                ><span class="work-meta"
-                  >Current project &middot; Open source</span
+      <!-- 5. Proof: things I started -->
+      <section class="section" id="work" aria-labelledby="work-label">
+        <h2 class="label" id="work-label">Projects</h2>
+        <ul class="rows">
+          <li id="agentconnect">
+            <span class="meta">now · open source</span>
+            <div>
+              <h3>
+                <a href="https://github.com/agentconnect-md/agentconnect"
+                  >AgentConnect ↗</a
                 >
               </h3>
-              <p class="work-desc">
+              <p>
                 A platform for teams and multiple AI agents to collaborate in
                 shared conversations and workflows. Connect agents to Slack,
                 GitHub, and other tools, with shared context, permissions, and
                 self-hosted execution.
               </p>
-              <p class="work-tag">
-                Multi-agent systems &middot; orchestration &middot; developer
-                infrastructure
+            </div>
+            <span class="tag">agents</span>
+          </li>
+          <li id="agentjit">
+            <span class="meta">open source</span>
+            <div>
+              <h3>
+                <a href="https://github.com/agent-jit/AgentJIT">AgentJIT ↗</a>
+              </h3>
+              <p>
+                A background JIT compiler daemon for autonomous LLM agents. It
+                analyzes agent execution traces and compiles stochastic,
+                multi-step reasoning paths into deterministic, zero-token shell
+                scripts.
               </p>
-            </article>
-            <article class="work-item">
-              <h3 class="work-title">
-                <span
-                  ><a
-                    href="https://arxiv.org/abs/2608.13568"
-                    target="_blank"
-                    rel="noopener"
-                    >Does a Language Server Save Tokens for Coding Agents?</a
-                  ></span
-                ><span class="work-meta"
-                  >Pengcheng Xu &middot; arXiv preprint &middot; 2026</span
+            </div>
+            <span class="tag">jit</span>
+          </li>
+          <li id="changelogue">
+            <span class="meta">open source</span>
+            <div>
+              <h3>
+                <a href="https://github.com/agentconnect-md/changelogue"
+                  >Changelogue ↗</a
                 >
               </h3>
-              <p class="work-desc">
-                A measurement methodology and preliminary study comparing LSP
-                and lexical retrieval. Rather than assuming semantic tools save
-                tokens, the study measures tokens-to-success and examines when
-                task, model, and codebase characteristics change the result.
+              <p>
+                An agent-driven release-intelligence framework that tracks
+                repository deltas and synthesizes human-readable release notes
+                automatically.
               </p>
-              <p class="work-tag">
-                <a href="articles.html">Article, paper &amp; code ↗</a>
-              </p>
-            </article>
+            </div>
+            <span class="tag">tooling</span>
+          </li>
+        </ul>
+        <p class="links"><a href="projects.html">All projects →</a></p>
+      </section>
 
-            <article class="work-item">
-              <h3 class="work-title">
-                <span>Eventstreams V3 Topology Re-architecture</span>
-                <span class="work-meta"
-                  >Microsoft Fabric &middot; 2023&ndash;2026</span
-                >
-              </h3>
-              <p class="work-desc">
+      <!-- 6. Proof: systems work -->
+      <section class="section" id="systems" aria-labelledby="systems-label">
+        <h2 class="label" id="systems-label">Systems work</h2>
+        <ul class="rows">
+          <li id="eventstreams">
+            <span class="meta">2023–2026 · Microsoft Fabric</span>
+            <div>
+              <h3>Eventstreams V3 Topology Re-architecture</h3>
+              <p>
                 As acting Tech Lead, re-architected the core real-time streaming
                 engine onto a unified backend compilation pipeline and a
                 high-performance IR/DAG framework. Serves Fabric customers
-                globally at ~5M events/day with ~180% YoY growth.
-              </p>
-              <p class="work-tag">
-                Compiler / IR / DAG &middot; codegen &middot; distributed
-                streaming
-              </p>
-            </article>
-
-            <article class="work-item">
-              <h3 class="work-title">
-                <span>Sentio.xyz Agent Orchestration</span>
-                <span class="work-meta"
-                  >Open-source contributor &middot; 348+ commits</span
+                globally; Microsoft
+                <a
+                  href="https://learn.microsoft.com/en-us/fabric/real-time-intelligence/event-streams/configure-settings"
+                  >documents</a
                 >
-              </h3>
-              <p class="work-desc">
+                a single eventstream at up to 200 MB/s.
+              </p>
+            </div>
+            <span class="tag">compilers</span>
+          </li>
+          <li id="sentio">
+            <span class="meta">348+ commits · open source</span>
+            <div>
+              <h3>Sentio.xyz Agent Orchestration</h3>
+              <p>
                 Designed and shipped a LangGraph supervisor-graph agent
                 orchestration system; built an LLM processor code-generation
                 agent with multi-chain support (EVM, Sui, Aptos, Move); owned
                 the EVM tracer, debugger, and Solidity language server.
               </p>
-              <p class="work-tag">
-                LLM agents &middot; supervisor graphs &middot; multi-chain
-                codegen
-              </p>
-            </article>
-
-            <article class="work-item">
-              <h3 class="work-title">
-                <span>NL &rarr; Streaming-Pipeline Agent</span>
-                <span class="work-meta"
-                  >Microsoft org hackathon &middot; 2nd place &middot; Oct
-                  2024</span
-                >
-              </h3>
-              <p class="work-desc">
+            </div>
+            <span class="tag">codegen</span>
+          </li>
+          <li id="nl-pipeline">
+            <span class="meta">Oct 2024 · hackathon, 2nd place</span>
+            <div>
+              <h3>NL → Streaming-Pipeline Agent</h3>
+              <p>
                 An LLM agent that compiles natural-language business constraints
-                directly into deployable Fabric Eventstreams pipelines.
+                directly into deployable Fabric Eventstreams pipelines. Built
+                at a Microsoft org hackathon.
               </p>
-              <p class="work-tag">
-                LLM agents &middot; program synthesis &middot; streaming
-              </p>
-            </article>
-          </div>
-        </section>
-        <section id="background" aria-labelledby="background-head">
-          <div class="section-head">
-            <h2 class="section-label" id="background-head">Background</h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
+            </div>
+            <span class="tag">synthesis</span>
+          </li>
+        </ul>
+      </section>
 
-          <article class="entry">
-            <div class="entry-head">
-              <span class="entry-org">Speak</span
-              ><span class="entry-meta">Jul 2026 &ndash; Present</span>
-            </div>
-            <p class="entry-role">Engineering</p>
-          </article>
-
-          <article class="entry">
-            <div class="entry-head">
-              <span class="entry-org">Microsoft</span>
-              <span class="entry-meta"
-                >Apr 2020 &ndash; 2026 &middot; Beijing &rarr; Shanghai</span
-              >
-            </div>
-            <p class="entry-role">Technical Lead / Senior Software Engineer</p>
-            <p class="entry-note">
-              Fabric Eventstreams (acting Tech Lead), Azure Stream Analytics
-              core engine, and Azure Synapse Spark notebooks.
-            </p>
-          </article>
-
-          <article class="entry">
-            <div class="entry-head">
-              <span class="entry-org">Elastic</span>
-              <span class="entry-meta"
-                >May 2018 &ndash; Apr 2020 &middot; Beijing</span
-              >
-            </div>
-            <p class="entry-role">Software Engineer</p>
-            <p class="entry-note">
-              Codesearch team (joined via the Insight.io acquisition); built a
-              high-scale Java language server on Eclipse JDT and LSP
-              code-intelligence in Kibana.
-            </p>
-          </article>
-
-          <article class="entry">
-            <div class="entry-head">
-              <span class="entry-org">YITU Technology</span>
-              <span class="entry-meta"
-                >Jul 2017 &ndash; Apr 2018 &middot; Shanghai</span
-              >
-            </div>
-            <p class="entry-role">
-              Software Engineer Intern &mdash; Infrastructure
-            </p>
-            <p class="entry-note">
-              Infrastructure and tooling across a high-availability inference
-              platform.
-            </p>
-          </article>
-
-          <p class="inline-links">
-            <span class="lbl">Upstream open-source</span>
-            <a
-              href="https://github.com/microsoft/Trill"
-              target="_blank"
-              rel="noopener"
-              >microsoft/Trill</a
-            >
-            <span class="sep" aria-hidden="true">&#9670;</span>
-            <a
-              href="https://github.com/tikv/tikv"
-              target="_blank"
-              rel="noopener"
-              >tikv/tikv</a
-            >
-            <span class="sep" aria-hidden="true">&#9670;</span>
-            <a
-              href="https://github.com/elastic/kibana"
-              target="_blank"
-              rel="noopener"
-              >elastic/kibana</a
-            >
-          </p>
-        </section>
-        <section id="education" aria-labelledby="edu-head">
-          <div class="section-head">
-            <h2 class="section-label" id="edu-head">Education</h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
-          <div class="edu">
-            <p class="school">University of Science and Technology of China</p>
-            <p class="degree">B.Sc. Computer Science &amp; Technology</p>
-            <p class="edu-meta">2014 &ndash; 2018 &middot; USTC</p>
-          </div>
-        </section>
-        <section id="skills" aria-labelledby="skills-head">
-          <div class="section-head">
-            <h2 class="section-label" id="skills-head">Skills</h2>
-            <div class="section-rule" role="presentation"></div>
-          </div>
-          <div class="skills-grid">
-            <div class="skill-block">
-              <h3>Languages</h3>
-              <div class="chips">
-                <span class="chip">C#</span><span class="chip">Python</span
-                ><span class="chip">Go</span> <span class="chip">Rust</span
-                ><span class="chip">TypeScript</span
-                ><span class="chip">Java</span> <span class="chip">C++</span
-                ><span class="chip">SQL</span><span class="chip">Scala</span>
-              </div>
-            </div>
-            <div class="skill-block">
-              <h3>LLM &amp; Agents</h3>
-              <div class="chips">
-                <span class="chip">LLM agent design</span
-                ><span class="chip">Agentic workflows</span>
-                <span class="chip">Prompt/context engineering</span>
-                <span class="chip">Inference-cost optimization</span>
-              </div>
-            </div>
-            <div class="skill-block">
-              <h3>Systems</h3>
-              <div class="chips">
-                <span class="chip">Distributed systems</span
-                ><span class="chip">Compiler construction</span>
-                <span class="chip">LSP</span><span class="chip">IR/DAG</span>
-                <span class="chip">Runtime sandboxing</span
-                ><span class="chip">High-throughput streaming</span>
-              </div>
-            </div>
-            <div class="skill-block">
-              <h3>Infrastructure</h3>
-              <div class="chips">
-                <span class="chip">Azure Fabric</span
-                ><span class="chip">Stream Analytics</span>
-                <span class="chip">Synapse</span
-                ><span class="chip">OneLake</span>
-                <span class="chip">Elasticsearch</span
-                ><span class="chip">Docker</span> <span class="chip">Linux</span
-                ><span class="chip">CI/CD</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+      <!-- 7. The record, one line each -->
+      <section class="section" id="background" aria-labelledby="background-label">
+        <h2 class="label" id="background-label">Background</h2>
+        <ul class="timeline">
+          <li id="speak">
+            <span class="meta">2026 →</span>
+            <b>Speak</b>
+            <span>Engineering · infrastructure and agentic consumer products for learners</span>
+          </li>
+          <li>
+            <span class="meta">2020 – 2026</span>
+            <b>Microsoft</b>
+            <span>Technical Lead / Senior Software Engineer · Beijing → Shanghai</span>
+          </li>
+          <li id="elastic">
+            <span class="meta">2018 – 2020</span>
+            <b>Elastic</b>
+            <span>Software Engineer, Codesearch (via the Insight.io acquisition) · Beijing</span>
+          </li>
+          <li>
+            <span class="meta">2017 – 2018</span>
+            <b>YITU Technology</b>
+            <span>Software Engineer Intern, Infrastructure · Shanghai</span>
+          </li>
+          <li>
+            <span class="meta">2014 – 2018</span>
+            <b>USTC</b>
+            <span>B.Sc. Computer Science &amp; Technology, University of Science and Technology of China</span>
+          </li>
+        </ul>
+        <p class="links">
+          <span class="label">Upstream open source</span>
+          <a href="https://github.com/microsoft/Trill">microsoft/Trill</a>
+          <a href="https://github.com/tikv/tikv">tikv/tikv</a>
+          <a href="https://github.com/elastic/kibana">elastic/kibana</a>
+        </p>
+      </section>
     </main>
+
     <footer class="site-footer">
-      <a class="wordmark" href="index.html"
-        >Pengcheng Xu<span class="wordmark-dot">.</span></a
-      >
-      <div class="footer-meta">
-        Engineer &amp; researcher<br />Shanghai, China
-      </div>
-      <div class="footer-links">
-        <a href="mailto:pooytr1@gmail.com">Email ↗</a
-        ><a href="https://github.com/Poytr1" target="_blank" rel="noopener"
-          >GitHub ↗</a
-        ><a href="#top">Back to top ↑</a>
+      <div class="wrap">
+        <span>Pengcheng Xu · Engineer &amp; researcher · Shanghai, China</span>
+        <nav aria-label="Footer">
+          <a href="mailto:pooytr1@gmail.com">Email</a>
+          <a href="https://github.com/Poytr1">GitHub</a>
+          <a href="#top">Back to top ↑</a>
+        </nav>
       </div>
     </footer>
   </body>
